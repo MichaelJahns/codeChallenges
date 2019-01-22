@@ -66,4 +66,5 @@ Return Output.join() // 'Cofe'
 
 ### Research Done
 Regexless solution found here
+
 https://stackoverflow.com/questions/19301806/regex-remove-repeated-characters-from-a-string-by-javascript
