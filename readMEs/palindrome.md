@@ -7,14 +7,15 @@ My first idea to solve this problem was using JS string indexing to compare the 
 until ive gone through the string, or encountered a situation where the index's did not hold the same value. 
 
 ## Positive Usecase
- first               =                last
-   |                                   |
-[ 'r' , 'a' , 'c' , 'e' , 'c' , 'a' , 'r' ]
+      first               =                last
+        |                                   |
+     [ 'r' , 'a' , 'c' , 'e' , 'c' , 'a' , 'r' ]
+       
 In this case we can see that the letter in first position and the last are the same so we'd move onto the next
 
-       second        =      second last
-         |                       |
-[ 'r' , 'a' , 'c' , 'e' , 'c' , 'a' , 'r' ]
+           second        =      second last
+              |                       |
+     [ 'r' , 'a' , 'c' , 'e' , 'c' , 'a' , 'r' ]
 
 We would continue checking until we completely navigate the input, at which point we would return true
 
