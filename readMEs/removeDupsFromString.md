@@ -3,9 +3,9 @@ Given a string, delete repeat values, return string otherwise unmutated
 
 # Visual
 Input             =>   Output
-'ABCB'            =>  'ABC' / 'ACB'
-'Without hope'    =>  'Withou pe' / 'wiut hope'
-'That happy dog'  =>  'Tha pydog' / 'thapy dog'
+* 'ABCB'            =>  'ABC' / 'ACB'
+* 'Without hope'    =>  'Withou pe' / 'wiut hope'
+* 'That happy dog'  =>  'Tha pydog' / 'thapy dog'
 
 The difference in outputs is whether or not you choose to remove the first instance of that value or the last
 
@@ -15,7 +15,7 @@ My first solution has an output array and checks if that value is present alread
 
     i = 0            output = []
       |
-    Coffee
+      Coffee
     
 The output array does not have a value of "C" within, so we push 'C' into output
 
@@ -61,8 +61,8 @@ Return Output.join() // 'Cofe'
 * decl output <= empty array
 
 * for stringAsArray length Do
- * if output =/= include i
- * push i into output
+  * if output =/= include i
+  * push i into output
 * return output joined back into string
 
 ### Research Done
