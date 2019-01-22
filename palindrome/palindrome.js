@@ -1,6 +1,6 @@
 //Solution one
 //============
-//Compare the first and lest letter in string, if they aren't the same return false, else return true
+//Compare the first and last index in string, if they aren't the same return false, else return true
 function comparePositions(input){
   let test = input.toString().toLowerCase()
   let countdown = test.length - 1;
