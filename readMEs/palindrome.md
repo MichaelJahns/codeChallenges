@@ -21,17 +21,17 @@ We would continue checking until we completely navigate the input, at which poin
 
 ## Negative Usecase
 
- first  =/=   last
-   |           |
-[ 'c' , 'a' , 't, ]
+     first  =/=   last
+       |           |
+    [ 'c' , 'a' , 't, ]
 
 In this case we can see that the first position and the last are not the same so we would return false and end the script
 
 # Algorithm
-*Treat input like an array of characters regardless of input
-*Count up array[i] in increments of one
-*Count down array[-1] in increments of one
-*If/else block to compare the two index positions
+* Treat input like an array of characters regardless of input
+* Count up array[i] in increments of one
+* Count down array[-1] in increments of one
+* If/else block to compare the two index positions
 
 # Big O
 O(n)
