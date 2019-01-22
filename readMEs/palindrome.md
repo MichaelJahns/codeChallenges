@@ -15,11 +15,15 @@ In this case we can see that the letter in first position and the last are the s
        second        =      second last
          |                       |
 [ 'r' , 'a' , 'c' , 'e' , 'c' , 'a' , 'r' ]
+
 We would continue checking until we completely navigate the input, at which point we would return true
+
 ## Negative Usecase
+
  first  =/=   last
    |           |
 [ 'c' , 'a' , 't, ]
+
 In this case we can see that the first position and the last are not the same so we would return false and end the script
 
 # Algorithm
