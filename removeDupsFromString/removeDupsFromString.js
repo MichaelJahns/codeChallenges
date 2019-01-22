@@ -13,6 +13,9 @@ function removeDuplicates(input){
   }
   return output.join('')
 }
+
+// Solution One is O(n)^2
+
 // Positive Use Cases Solution One
 // Standard String:              removeDuplicates('ABCB')
 // Another Standard String       removeDuplicates'Coffee')
@@ -41,6 +44,9 @@ function removeDuplicatesObject(input){
   }
   return output.join('')
 }
+
+// Solution Three O(n)
+
 // Positive Use Cases Solution Two
 // Array:                        removeDuplicatesObject(['A','B','C','B'])
 // Standard String:              removeDuplicatesObject('ABCB')
@@ -60,6 +66,9 @@ function removeDuplicatesRegex(input){
   let regex = /(.)(?=.*\1)/g
   return input.replace(regex, '')
 }
+
+// Solution Three is O(n)
+
 // Positive Use Cases Solution Three
 // Standard String:              removeDuplicatesRegex('ABCB')
 // Another Standard String       removeDuplicatesRegex('Coffee')
@@ -84,8 +93,10 @@ function removeDuplicatesResearched(input){
   }).join('');
   return output
 }
-// Positive Use Cases Solution Research
+  
+// Researched Solution is O(n)
 
+// Positive Use Cases Solution Research
 // Standard String:              removeDuplicatesResearched('ABCB')
 // Another Standard String       removeDuplicatesResearched('Coffee')
 // String with Mulitple Spaces:  removeDuplicatesResearched('That happy dog')
