@@ -61,8 +61,7 @@ Return Output.join() // 'Cofe'
 * decl output <= empty array
 
 * for stringAsArray length Do
-  * if output =/= include i
-    * push i into output
+  * if output =/= include i {push i into output}
 * return output joined back into string
 
 ### Research Done
