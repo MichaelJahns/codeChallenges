@@ -37,8 +37,8 @@ In this case we can see that the first position and the last are not the same so
 * decl inputAsString <= input to String to Lowercase
 * decl countdown <= -1
 * for inputAsString length Do
-      * if inputAsString at i =/= inputAsString at countdown 
-            * return false
-      * else 
-            * countdown --
+  * if inputAsString at i =/= inputAsString at countdown 
+   * return false
+  * else 
+   * countdown --
 * return true
