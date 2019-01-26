@@ -13,6 +13,8 @@ function comparePositions(input){
   return true
 }
 
+// Solution One is O(n)
+
 // Positive Use Cases Solution One
 // Palindromic Integers:               comparePositions(12321)
 // Palindromic Standard strings:       comparePositions('racecar')
@@ -39,6 +41,8 @@ function reverseAndCompare(input){
   }
   return test.join() === temporaryArr.join()
 }
+
+// Solution Two is O(n)
 
 // Positive Use Cases Solution Two
 // Palindromic Integers:               reverseAndCompare(12321)
@@ -67,6 +71,8 @@ function regexPalindrome(input){
 
   return string === backwardsString
 }
+
+// Solution Three is O(n)
 
 // Positive Use Cases Solution Three
 // Palindromic Integers:               regexPalindrome(12321)
