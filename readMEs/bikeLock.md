@@ -3,23 +3,20 @@ Given a bike lock code of indeterminate length as a string, return the number of
 # Visual
 Because the bike lock can spin up or down there are two routes to every digit, rotating up and rotating down.
 
-Counting Jumps to 4 spinning up
-
                                 +4
              /   \ /   \ /   \ /   \ 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
-
-Counting Jumps to 4 spinning down
+            
+Counting number of jumps to 4 spinning up
 
                                         -6                
            \                          /  \  /  \  /  \  /  \  /   \ /
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
-Below is how the problem domain can be visualized
 
-We must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up, sums and return the total number of spins
+Counting number of jumps to 4 spinning down
 
                                   (spins and direction)
                                     -1  +4  +2  +0  
@@ -29,19 +26,21 @@ We must develop an algorithm that spins down if a value is closer down, and spin
                  
             1 + 4 + 2 + 0 = 7 spins (output)
             
-Every position labeled by number of jumps
-               
+Below is how the problem domain can be visualized, we must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up, sums and return the total number of spins
+
                  +1    +2    +3    +4   +/-5  -4    -3    -2    -1     
 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
-
-Viewed this way we can see a pattern emerge and form our algorithm, for values greater 5 it is more expediant to count down, for values less than 6 it is more expediant to count up. 
+         
+Every position labeled by number of jumps
 
             -4   -3    -2    -1          +1    +2    +3    +4     +5 
  
             6     7     8     9     0     1     2     3     4     5     
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
+            
+We can rearrange the numberline to be displayed with 0 in the middle. Viewed this way we can see a pattern emerge and form our algorithm, for values greater 5 it is more expediant to count down, for values less than 6 it is more expediant to count up.
 
 # Algorithm
 * iterate over every i of str
