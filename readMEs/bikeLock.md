@@ -4,6 +4,7 @@ Given a bike lock code of indeterminate length as a string, return the number of
 Bike locks can be spun up and down, for characters great that 5 it is faster to spin down (from zero), for characters less that 5 it is fast to spin up (from zero)
 ## Usecase(s)
 Because the bike lock can spin up or down there are two routes to every digit, rotating up and rotating down.
+
 Counting Jumps to 4 spinning up
 
                                 +4
@@ -19,7 +20,8 @@ Counting Jumps to 4 spinning down
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
 Below is how the problem domain can be visualized
-We must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up
+
+We must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up, sums and return the total number of spins
 
                                   (spins and direction)
                                     -1  +4  +2  +0  
