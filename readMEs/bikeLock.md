@@ -4,6 +4,7 @@ Given a bike lock code of indeterminate length as a string, return the number of
 Bike locks can be spun up and down, for characters great that 5 it is faster to spin down (from zero), for characters less that 5 it is fast to spin up (from zero)
 ## Usecase(s)
 Below is how the problem domain can be visualized
+
                                     -1  +4  +2  +0  
                               fxn    |   |   |   |
             0 ) 0 ) 0 ) 0 )   ===>   9 ) 4 ) 2 ) 0 )
@@ -11,12 +12,14 @@ Below is how the problem domain can be visualized
             1 + 4 + 2 + 0 = 7 spins to reach the code of 9420 from 0000
 
 Counting Jumps forwards
+
                                 +4
              /   \ /   \ /   \ /   \ 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
 Counting Jumps backwards
+
                                                         -3
            \                                           /  \  /  \  /
             0     1     2     3     4     5     6     7     8     9
@@ -24,7 +27,7 @@ Counting Jumps backwards
 
 Every position labeled by number of jumps
                
-                 +1    +2    +3    +4    +/-5  -4    -3    -2    -1     
+                 +1    +2    +3    +4   +/-5  -4    -3    -2    -1     
 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
