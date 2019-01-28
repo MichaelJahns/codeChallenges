@@ -3,28 +3,32 @@ Given a bike lock code of indeterminate length as a string, return the number of
 # Visual
 Bike locks can be spun up and down, for characters great that 5 it is faster to spin down (from zero), for characters less that 5 it is fast to spin up (from zero)
 ## Usecase(s)
-Below is how the problem domain can be visualized
-
-                                    -1  +4  +2  +0  
-                              fxn    |   |   |   |
-            0 ) 0 ) 0 ) 0 )   ===>   9 ) 4 ) 2 ) 0 )
-
-            1 + 4 + 2 + 0 = 7 spins to reach the code of 9420 from 0000
-
-Counting Jumps forwards
+Because the bike lock can spin up or down there are two routes to every digit, rotating up and rotating down.
+Counting Jumps to 4 spinning up
 
                                 +4
              /   \ /   \ /   \ /   \ 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
-Counting Jumps backwards
+Counting Jumps to 4 spinning down
 
-                                                        -3
-           \                                           /  \  /  \  /
+                                        -6                
+           \                          /  \  /  \  /  \  /  \  /   \ /
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
+Below is how the problem domain can be visualized
+We must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up
+
+                                  (spins and direction)
+                                    -1  +4  +2  +0  
+                              fxn    |   |   |   |
+            0 ) 0 ) 0 ) 0 )   ===>   9 ) 4 ) 2 ) 0 )
+             start from 0               (input)
+                 
+            1 + 4 + 2 + 0 = 7 spins (output)
+            
 Every position labeled by number of jumps
                
                  +1    +2    +3    +4   +/-5  -4    -3    -2    -1     
@@ -32,7 +36,7 @@ Every position labeled by number of jumps
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
-Viewed this was we can see a pattern emerge and form our algorithm
+Viewed this way we can see a pattern emerge and form our algorithm
 
             -4   -3    -2    -1          +1    +2    +3    +4     +5 
  
@@ -41,8 +45,8 @@ Viewed this was we can see a pattern emerge and form our algorithm
 
 # Algorithm
 * iterate over every i of str
-* count up if i > 5
-* count down if i < 5
+* count up if i >= 5
+* count down if i <= 6
 * add the differences and return
 
 # Psuedocode
