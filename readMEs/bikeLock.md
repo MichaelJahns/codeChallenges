@@ -1,8 +1,6 @@
 # Problem Domain
 Given a bike lock code of indeterminate length as a string, return the number of rotations needed to reach that code from 0
 # Visual
-Bike locks can be spun up and down, for characters great that 5 it is faster to spin down (from zero), for characters less that 5 it is fast to spin up (from zero)
-## Usecase(s)
 Because the bike lock can spin up or down there are two routes to every digit, rotating up and rotating down.
 
 Counting Jumps to 4 spinning up
@@ -38,7 +36,7 @@ Every position labeled by number of jumps
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
-Viewed this way we can see a pattern emerge and form our algorithm
+Viewed this way we can see a pattern emerge and form our algorithm, for values greater 5 it is more expediant to count down, for values less than 6 it is more expediant to count up. 
 
             -4   -3    -2    -1          +1    +2    +3    +4     +5 
  
