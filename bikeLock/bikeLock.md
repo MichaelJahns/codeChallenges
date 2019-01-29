@@ -1,45 +1,51 @@
 # Problem Domain
 Given a bike lock code of indeterminate length as a string, return the number of rotations needed to reach that code from 0
 # Visual
-Bike locks can be spun up and down, for characters great that 5 it is faster to spin down (from zero), for characters less that 5 it is fast to spin up (from zero)
-## Usecase(s)
-Below is how the problem domain can be visualized
-                                    -1  +4  +2  +0  
-                              fxn    |   |   |   |
-            0 ) 0 ) 0 ) 0 )   ===>   9 ) 4 ) 2 ) 0 )
+Because the bike lock can spin up or down there are two routes to every digit, rotating up and rotating down.
 
-            1 + 4 + 2 + 0 = 7 spins to reach the code of 9420 from 0000
-
-Counting Jumps forwards
                                 +4
              /   \ /   \ /   \ /   \ 
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
+            
+Counting number of jumps to 4 spinning up
 
-Counting Jumps backwards
-                                                        -3
-           \                                           /  \  /  \  /
+                                        -6                
+           \                          /  \  /  \  /  \  /  \  /   \ /
             0     1     2     3     4     5     6     7     8     9
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
 
+
+Counting number of jumps to 4 spinning down
+
+                                  (spins and direction)
+                                    -1  +4  +2  +0  
+                              fxn    |   |   |   |
+            0 ) 0 ) 0 ) 0 )   ===>   9 ) 4 ) 2 ) 0 )
+             start from 0               (input)
+                 
+            1 + 4 + 2 + 0 = 7 spins (output)
+            
+Below is how the problem domain can be visualized, we must develop an algorithm that spins down if a value is closer down, and spins up if it is closer up, sums and return the total number of spins
+
+                 +1    +2    +3    +4   +/-5  -4    -3    -2    -1     
+
+            0     1     2     3     4     5     6     7     8     9
+            |_____|_____|_____|_____|_____|_____|_____|_____|_____|
+         
 Every position labeled by number of jumps
-               
-                 +1    +2    +3    +4    +/-5  -4    -3    -2    -1     
-
-            0     1     2     3     4     5     6     7     8     9
-            |_____|_____|_____|_____|_____|_____|_____|_____|_____|
-
-Viewed this was we can see a pattern emerge and form our algorithm
 
             -4   -3    -2    -1          +1    +2    +3    +4     +5 
  
             6     7     8     9     0     1     2     3     4     5     
             |_____|_____|_____|_____|_____|_____|_____|_____|_____|
+            
+We can rearrange the numberline to be displayed with 0 in the middle. Viewed this way we can see a pattern emerge and form our algorithm, for values greater 5 it is more expediant to count down, for values less than 6 it is more expediant to count up.
 
 # Algorithm
 * iterate over every i of str
-* count up if i > 5
-* count down if i < 5
+* count up if i >= 5
+* count down if i <= 6
 * add the differences and return
 
 # Psuedocode
