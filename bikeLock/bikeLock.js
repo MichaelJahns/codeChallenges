@@ -1,7 +1,7 @@
 //Solution one
 //============
 //Check to see if the current value is closer spinning up or down, and add to accumulator accordingly. Because JS can compare numbers as a str against numbers as int, we dont need to use parseInt(), this is a strength of JS, working with another language the type of the data may have to be transformed before we can start comparing it.
-
+//Note: this code challenge could be made far more difficult if the bikelock had possible values greater than 9
 
 function countBikeLockTurns(str){
   const arr = str.split('')
@@ -20,11 +20,12 @@ function countBikeLockTurns(str){
 // Solution is O(n)
 
 // Positive Use Cases Solution One
-// All digits below 5:          countBikeLockTurns('1111') //expect 4
-// All digits above 5:          countBikeLockTurns('9999') //expect 4
-// Digits on either side of 5:  countBikeLockTurns('2468') //expect 12
+// All digits below 5:                      countBikeLockTurns('1111') //expect 4
+// All digits above 5:                      countBikeLockTurns('9999') //expect 4
+// Digits on either side of 5:              countBikeLockTurns('2468') //expect 12
+// A bike lock with any number of digits:   countBikeLockTurns('1111111111111') //expect 13
 
 // Solution One doesn't work with
-// Input as array:              countBikeLockTurns(['2','4','6','8']) //expect 12
-// Input as string:             countBikeLockTurns(2345) // expect 14
+// Input as array:                          countBikeLockTurns(['2','4','6','8']) //expect 12
+// Input as string:                         countBikeLockTurns(2345) // expect 14
 
