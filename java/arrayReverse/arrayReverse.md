@@ -53,4 +53,6 @@ Works with even array lengths because every position has a partner and swaps
 O(n)
 
 ## Solution
+Whiteboarded with Merry Cimakasky
+
 [arrayReverse Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/arraryReverse.jpg)
