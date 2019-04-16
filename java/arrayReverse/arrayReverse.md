@@ -13,7 +13,7 @@ desired output = [ 5, 4, 3, 2, 1]
 ### Solution One
 Create an output array with length equal to inputs.length, iterate over output and fill every position i with 'input[input.length-i-1]'
 
-| i  | input[i]  |output[i] |      output |
+| i  | input[i]  | input[input.length - i -1] |      output |
 |----|-----------|----------|------------ |
 | 0  | 1 | 5 | [5, 0, 0, 0, 0]|
 | 1  | 2 | 4 | [5, 4, 0, 0, 0]|
