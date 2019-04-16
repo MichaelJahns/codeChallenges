@@ -68,7 +68,7 @@ function fillTheValleys(arr){
   }
   console.log(`output is ${output}`)
 }
-// Solution One has a Big O of O(n)^n
+// Solution One has a Big O of O(n)^2
 
 //Positive Use Cases Solution One
 //Simple Valley:            fillTheValleys([3,0,2]) //expect 2
