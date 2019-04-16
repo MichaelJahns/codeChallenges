@@ -12,4 +12,4 @@ Write a function called reverseArray which takes an array as an argument. Withou
 O(n)
 
 ## Solution
-[arrayReverse Whiteboard](../assets/arrayReverse.jpg)
+[arrayReverse Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/arraryReverse.jpg)
