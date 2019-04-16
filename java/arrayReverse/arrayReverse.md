@@ -11,13 +11,13 @@ input = [ 1, 2, 3, 4, 5]
 ### Solution One
 Create an output array with length equal to inputs.length, iterate over output and fill every position i with 'input[input.length-i-1]'
 
-| i  |      output[i] |
-|----|--------------- |
-| 0  | [5, 0, 0, 0, 0]|
-| 1  | [5, 4, 0, 0, 0]|
-| 2  | [5, 4, 3, 0, 0]|
-| 1  | [5, 4, 3, 2, 0]|
-| 0  | [5, 4, 3, 2, 1]|
+| i  | input[i]  |output[i] |      output |
+|----|-----------|----------|------------ |
+| 0  | 1 | 5 | [5, 0, 0, 0, 0]|
+| 1  | 2 | 4 | [5, 4, 0, 0, 0]|
+| 2  | 3 | 3 | [5, 4, 3, 0, 0]|
+| 1  | 4 | 2 | [5, 4, 3, 2, 0]|
+| 0  | 5 | 1 | [5, 4, 3, 2, 1]|
 
 ### Solution Two
 Iterate over the given array 'input.length/2' times (attempting to do it 'input.length' times will create palindromes), store input[i] in temp, overwrite input[i] with input[length-1-i], and save temp to its old position
