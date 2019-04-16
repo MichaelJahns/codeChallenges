@@ -7,6 +7,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 I am using a built in method for both of my solutions, i have imported java.util.Arrays so that I can print my input and output using 'Arrays.toString(Object)'. I believe there should be a way to make the return visible, but my first day with the language im not familiar with it enough yet. 
 ## Visual
 input = [ 1, 2, 3, 4, 5]
+
 desired output = [ 5, 4, 3, 2, 1]
 
 ### Solution One
