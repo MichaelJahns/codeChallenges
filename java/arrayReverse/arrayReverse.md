@@ -12,3 +12,4 @@ Write a function called reverseArray which takes an array as an argument. Withou
 O(n)
 
 ## Solution
+[](../assets/arrayReverse.jpg)
