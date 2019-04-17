@@ -3,12 +3,23 @@
  */
 package array_shift;
 
+import java.util.Arrays;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+    public static void main(String[] args) {
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static int[] insertShiftArray(int insert, int[] input) {
+        int[] output = new int[input.length + 1];
+
+        for (int i = 0; i < input.length - (input.length / 2); i++) {
+            output[i] = input[i];
+        }
+        output[input.length - input.length / 2] = insert;
+        for (int i = 0; i < input.length / 2; i++) {
+            output[output.length - 1 - i] = input[input.length - 1 - i];
+        }
+        System.out.println(Arrays.toString(output));
+        return output;
     }
 }

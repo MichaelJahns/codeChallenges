@@ -4,13 +4,11 @@
 package array_shift;
 
 import org.junit.Test;
+
+import static array_shift.App.insertShiftArray;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-    }
     @Test public void testArrayShift(){
         int[] input1 = {1,2,4,5};
         int[] expectedOutput1 = {1,2,3,4,5};
@@ -19,8 +17,8 @@ public class AppTest {
         int[] input3 = {};
         int[] expectedOutput3 = {-60};
 
-        assertArrayEquals(expectedOutput1, insertShiftArray(input1));
-        assertArrayEquals(expectedOutput2, insertShiftArray(input2));
-        assertArrayEquals(expectedOutput3, insertShiftArray(input3));
+        assertArrayEquals(expectedOutput1, insertShiftArray(3, input1));
+        assertArrayEquals(expectedOutput2, insertShiftArray(1, input2));
+        assertArrayEquals(expectedOutput3, insertShiftArray(-60, input3));
     }
 }
