@@ -26,10 +26,13 @@ import java.util.Arrays;
 
 public class ArrayReverse{
     public static void main(String[] args){
-        int[] input = new int[]{1,2,3,4,5};
-        reverseArray(input);
+        int[] test1 = new int[]{1, 2, 3, 4, 5, 6};
+        int[] test2 = new int[]{0, 0, 0, 0, 0, 5};
+        int[] test3 = new int[]{200, 400, 300 , 500};
 
-
+        reverseArray(test1);
+        reverseArray(test2);
+        reverseArray(test3);
     }
     public static int[] reverseArray(int[] input){
         int[] output = input;
