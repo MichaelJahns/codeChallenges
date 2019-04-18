@@ -52,4 +52,4 @@ O(n)
 
 ## Solution
 Whiteboarded with Trey Herndon
-[arrayReverse Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/binaryShift.jpg)
+[binarySearch Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/binarySearch.jpg)
