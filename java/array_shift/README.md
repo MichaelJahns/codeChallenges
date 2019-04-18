@@ -52,4 +52,4 @@ O(n)
 
 ## Solution
 Whiteboarded with Dana Voros
-[arrayReverse Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/arrayShift.jpg)
+[arrayShift Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/arrayShift.jpg)
