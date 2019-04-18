@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe125880-54b6-44b9-8c45-50f217997d3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_27_0_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_qual_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/binarySearch.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/binarySearch.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binarySearch.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../array_shift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../array_shift/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/binarySearch/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binarySearch/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/binarySearch/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/binarySearch/AppTest.java" afterDir="false" />
@@ -47,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/binarySearch/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -56,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/binarySearch/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="172">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +55,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/binarySearch/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/binarySearch/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/binarySearch/App.java" />
       </list>
     </option>
   </component>
@@ -147,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.AppTest.benchMarkBinarySearch">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="binarySearch.App" />
       <module name="binarySearch.main" />
@@ -170,8 +152,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.benchMarkBinarySearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binarySearch.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="binarySearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="binarySearch" />
+      <option name="MAIN_CLASS_NAME" value="binarySearch.AppTest" />
+      <option name="METHOD_NAME" value="benchMarkBinarySearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.benchMarkBinarySearch" />
         <item itemvalue="JUnit.AppTest" />
       </list>
     </recent_temporary>
@@ -189,11 +188,43 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 31m 41s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 31m 51s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 32m 49s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 33m 24s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 34m 03s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 34m 20s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 34m 41s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 34m 52s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 35m 13s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_benchMarkBinarySearch - 2019.04.17 at 17h 35m 26s.xml">
+      <configuration name="AppTest.benchMarkBinarySearch" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534413" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2534413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -202,8 +233,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -226,15 +257,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/binarySearch/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/binarySearch/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="172">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
