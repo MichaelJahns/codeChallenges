@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.Arrays;
+
 public class LinkedList {
     Node head;
     int listLength;
@@ -9,23 +11,35 @@ public class LinkedList {
         listLength = 0;
     }
 
-    public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        System.out.println("Linked List " + ll.getSize());
-
-        System.out.println(ll.getSize());
-        ll.add(17);
-        ll.add(5);
-        System.out.println("19   " + ll.find(35));
-        System.out.println("20   " + ll.find(5).getValue());
-//        ll.add(10);
-//        System.out.println(ll.find(17).getData());
-//        ll.remove(5);
-//        System.out.println(ll.getSize());
-//        System.out.println(ll.find(17));
+    public int getHead() {
+        Node headNode = this.head;
+        return headNode.getValue();
     }
 
-    public Node add(int value) {
+    public int[] printGuts() {
+        Node current = this.head;
+        int[] guts = new int[this.getSize()];
+
+        for (int i = 0; i < this.getSize(); i++) {
+            guts[i] = current.getValue();
+            current = current.getNextNode();
+        }
+        System.out.println(Arrays.toString(guts));
+        return guts;
+    }
+
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.addToStart(17);
+        ll.addToStart(5);
+        ll.addToStart(10);
+        ll.addToStart(45);
+        ll.addToStart(24);
+        ll.addToStart(11);
+        ll.getHead();
+    }
+
+    public Node addToStart(int value) {
         Node newNode = new Node(value, head);
         this.head = newNode;
         this.listLength++;
@@ -41,12 +55,13 @@ public class LinkedList {
     }
 
     public Node find(int value) {
-        Node thisNode = this.head;
+        Node current = this.head;
 
-        while (thisNode != null) {
-            if (thisNode.getValue() == value)
-                return thisNode;
-            thisNode = thisNode.getNextNode();
+        while (current != null) {
+            if (current.getValue() == value) {
+                return current;
+            }
+            current = current.getNextNode();
         }
         return null;
     }
@@ -70,7 +85,7 @@ public class LinkedList {
     }
 
     public class Node {
-        private Node nextNode;
+        private Node pointer;
         private int value;
 
         private Node() {
@@ -82,7 +97,7 @@ public class LinkedList {
 
         private Node(int val, Node next) {
             value = val;
-            nextNode = next;
+            pointer = next;
         }
 
         public int getValue() {
@@ -90,12 +105,11 @@ public class LinkedList {
         }
 
         private void setNextNode(Node n) {
-            this.nextNode = n;
+            this.pointer = n;
         }
 
         private Node getNextNode() {
-            return this.nextNode;
+            return this.pointer;
         }
-
     }
 }
