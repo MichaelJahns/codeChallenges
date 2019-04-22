@@ -1,17 +1,16 @@
 # codeChallenges
 Coded by Michael J
-## 1-18-19 
-- [Check if Palindrome](/palindrome/palindrome.md)
 
-## 1-21-19
-- [Remove Duplicates From Sting](/removeDupbsFromString/removeDupsFromString.md)
 
-## 1-25-19
-- [Check if Two Strings are Anagrams](/anagram/anagram.md)
-- [Count Turns On Bike Lock](/bikeLock/bikeLock.md)
-
-## 1-28-19
-- [Count Valleys](/countValleys/countValleys.md)
-
-## 1-29-19
-- [Fill Valleys With Water](/valleysHoldingWater/valleysHoldingWater.md)
+| Date    | Challenge                     | Language  | Link |
+|---------|-------------------------------|-----------|------|
+| 1-18-19 | Check for Palindrome          | Javascript| [link](/javascript/palindrome/) |
+| 1-21-19 | Remove Dups From String       | Javascript| [link](/javascript/removeDupsFromString/) |
+| 1-25-19 | Check if Strings are Anagrams | Javascript| [link](/javascript/anagram/) |
+| 1-25-19 | Count Turns on Bike Lock      | Javascript| [link](/javascript/bikeLock/) |
+| 1-28-19 | Count Valleys in Array        | Javascript| [link](/javascript/countValleys/) |
+| 1-29-19 | Fill in Valleys with Water    | Javascript| [link](/javascript/valleysHoldingWater/) |
+| 4-15-19 | Count Turns on Bike Lock      | Java | [link](/java/bikelock/) |
+| 4-15-19 | Reverse an Array              | Java | [link](/java/arrayReverse/) |
+| 4-16-19 | insertArrayShift              | Java | [link](/java/array_shift/) |
+| 4-22-19 | LinkedList                    | Java | [link](/java/LinkedList/) |
