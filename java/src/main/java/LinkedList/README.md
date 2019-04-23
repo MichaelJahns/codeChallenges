@@ -1,7 +1,7 @@
 # Linked List
 Adds  linked list and node classes. 
 Available methods Linked List
-getHead(), printGuts(), getSize(), find(int), addToStart(int), remove(),
+getHead(), printGuts(), getSize(), find(int), addToStart(int value), addToEnd(int value), addBefore(int value, int target), addAfter(int value, int target)
 
 Availble methods for Nodes
 three constructors, getValue(), setNextNode(), getNextNodes()
