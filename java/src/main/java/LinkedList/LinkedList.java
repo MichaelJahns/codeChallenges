@@ -16,27 +16,59 @@ public class LinkedList {
         return headNode.getValue();
     }
 
+    public Node addToEnd(int value) {
+        Node current = head;
+        while (current.pointer != null) {
+            current = current.next();
+        }
+        Node newNode = new Node(value, null);
+        current.setNextNode(newNode);
+        this.listLength++;
+        return newNode;
+    }
+
+    public Node addBefore(int value, int target) {
+        Node current = head;
+        while (current.next().getValue() != target) {
+            current = current.next();
+        }
+        Node newNode = new Node(value, current.next());
+        current.pointer = newNode;
+        this.listLength++;
+        return newNode;
+    }
+
+    public Node addAfter(int value, int target) {
+        Node current = head;
+        while (current.getValue() != target) {
+            current = current.next();
+        }
+        Node newNode = new Node(value, current.pointer);
+        current.pointer = newNode;
+        this.listLength++;
+        return newNode;
+    }
+
     public int[] printGuts() {
         Node current = this.head;
         int[] guts = new int[this.getSize()];
 
         for (int i = 0; i < this.getSize(); i++) {
             guts[i] = current.getValue();
-            current = current.getNextNode();
+            current = current.next();
         }
         System.out.println(Arrays.toString(guts));
         return guts;
     }
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.addToStart(17);
-        ll.addToStart(5);
-        ll.addToStart(10);
-        ll.addToStart(45);
-        ll.addToStart(24);
-        ll.addToStart(11);
-        ll.getHead();
+        LinkedList addToEnd = new LinkedList();
+        addToEnd.addToStart(7);
+        addToEnd.addToStart(8);
+        addToEnd.addToStart(9);
+        addToEnd.addBefore(10, 7);
+
+        addToEnd.printGuts();
     }
 
     public Node addToStart(int value) {
@@ -46,9 +78,6 @@ public class LinkedList {
         return newNode;
     }
 
-    public void setSize(int s) {
-        this.listLength = s;
-    }
 
     public int getSize() {
         return this.listLength;
@@ -61,28 +90,28 @@ public class LinkedList {
             if (current.getValue() == value) {
                 return current;
             }
-            current = current.getNextNode();
+            current = current.next();
         }
         return null;
     }
 
-    public boolean remove(int data) {
-        Node thisNode = this.head;
-        Node prevNode = null;
-
-        while (thisNode != null) {
-            if (prevNode != null) {
-                prevNode.setNextNode(thisNode.getNextNode());
-            } else {
-                this.head = null;
-                this.setSize(this.getSize() - 1);
-                return true;
-            }
-            prevNode = thisNode;
-            thisNode = thisNode.getNextNode();
-        }
-        return false;
-    }
+//    public boolean remove(int data) {
+//        Node thisNode = this.head;
+//        Node prevNode = null;
+//
+//        while (thisNode != null) {
+//            if (prevNode != null) {
+//                prevNode.setNextNode(thisNode.next());
+//            } else {
+//                this.head = null;
+//                this.setSize(this.getSize() - 1);
+//                return true;
+//            }
+//            prevNode = thisNode;
+//            thisNode = thisNode.next();
+//        }
+//        return false;
+//    }
 
     public class Node {
         private Node pointer;
@@ -108,7 +137,7 @@ public class LinkedList {
             this.pointer = n;
         }
 
-        private Node getNextNode() {
+        public Node next() {
             return this.pointer;
         }
     }
