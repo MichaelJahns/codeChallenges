@@ -16,25 +16,25 @@ This solution will break at the first index where target = input[i], so for case
 ## Visual
 
 ### Solution addToEnd
-input value
-find node where node.point == null
-newNode(value)
-this.pointer <- newNode
-newNode.pointer <- null
+    input value
+    find node where node.point == null
+    newNode(value)
+    this.pointer <- newNode
+    newNode.pointer <- null
 
 ### Solution addBefore
-input value and target
-find node.pointer == target
-newNode(value)
-this.pointer <- newNode
-newNode.pointer <- target
+    input value and target
+    find node.pointer == target
+    newNode(value)
+    this.pointer <- newNode
+    newNode.pointer <- target
 
 ### Solution addAfter
-input value, target
-find node == target
-newNode(value)
-newNode.pointer <- this.pointer
-this.point <- newNode
+    input value, target
+    find node == target
+    newNode(value)
+    newNode.pointer <- this.pointer
+    this.point <- newNode
     
 ## Approach and Efficiency
 ### Solutions found
