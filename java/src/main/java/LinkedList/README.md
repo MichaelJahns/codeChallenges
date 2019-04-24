@@ -43,6 +43,8 @@ This solution will break at the first index where target = input[i], so for case
 ### Efficiency
 O(n)
 
-## Solution
+## Whiteboard
 Whiteboarded with Merry Cimakasky
-[linkedListExtended Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/assets/binaryShift.jpg)
+[linkedListExtended Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/linkedListExtended.jpg)
+Whiteboarded with Dana Vors
+[linkedListKFromEnd Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/linkedListKFromEnd.jpg)
