@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class LinkedList {
     Node head;
     int listLength;
+    private Exception RuntimeException;
 
     public LinkedList() {
         head = new Node();
@@ -14,6 +15,13 @@ public class LinkedList {
     public int getHead() {
         Node headNode = this.head;
         return headNode.getValue();
+    }
+
+    public Node addToStart(int value) {
+        Node newNode = new Node(value, head);
+        this.head = newNode;
+        this.listLength++;
+        return newNode;
     }
 
     public Node addToEnd(int value) {
@@ -49,6 +57,17 @@ public class LinkedList {
         return newNode;
     }
 
+    public int positionsFromEnd(int k) throws Exception {
+        if (k > getSize() || k < 0) {
+            throw RuntimeException;
+        }
+        Node current = head;
+        for (int i = 0; i < getSize() - k - 1; i++) {
+            current = current.next();
+        }
+        return current.value;
+    }
+
     public int[] printGuts() {
         Node current = this.head;
         int[] guts = new int[this.getSize()];
@@ -61,23 +80,15 @@ public class LinkedList {
         return guts;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         LinkedList addToEnd = new LinkedList();
         addToEnd.addToStart(7);
         addToEnd.addToStart(8);
         addToEnd.addToStart(9);
-        addToEnd.addBefore(10, 7);
-
         addToEnd.printGuts();
+        int output = addToEnd.positionsFromEnd(2);
+        System.out.println(output);
     }
-
-    public Node addToStart(int value) {
-        Node newNode = new Node(value, head);
-        this.head = newNode;
-        this.listLength++;
-        return newNode;
-    }
-
 
     public int getSize() {
         return this.listLength;

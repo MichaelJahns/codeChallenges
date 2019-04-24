@@ -134,4 +134,46 @@ public class testLinkedList {
 
         assertEquals(Arrays.toString(expected), Arrays.toString(actual));
     }
+
+    @Test
+    public void testPositionsFromEnd() throws Exception {
+        LinkedList testFromEnd = new LinkedList();
+        testFromEnd.addToStart(5);
+        testFromEnd.addToStart(4);
+        testFromEnd.addToStart(3);
+        testFromEnd.addToStart(2);
+        testFromEnd.addToStart(1);
+        testFromEnd.addToStart(0);
+
+
+        //k = length of LinkedList
+        int expected = 0;
+        int actual = testFromEnd.positionsFromEnd(6);
+        assertEquals(expected, actual);
+
+        //k <= length of LinkedList
+        int expected2 = 1;
+        int actual2 = testFromEnd.positionsFromEnd(4);
+        assertEquals(expected2, actual2);
+    }
+
+    @Test
+    public void testPostitionsFromEndEdge() throws Exception {
+        LinkedList exceptional = new LinkedList();
+        exceptional.addToStart(10);
+
+        //k > length of LinkedList expect exception
+        //How do I assert an exception?
+        // assertEquals(1, exceptional.positionsFromEnd(10));
+        // fail();
+
+        // Length of Linked List = 1
+        assertEquals(10, exceptional.positionsFromEnd(0));
+
+        //k != positive integer
+        // How do I assert an exception?
+//        assertEquals(1, exceptional.positionsFromEnd(-2));
+//        fail();
+
+    }
 }
