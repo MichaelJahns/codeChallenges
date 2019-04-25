@@ -1,51 +1,35 @@
 # Linked List
 Adds  linked list and node classes. 
 Available methods Linked List
-getHead(), printGuts(), getSize(), find(int), addToStart(int value), addToEnd(int value), addBefore(int value, int target), addAfter(int value, int target), positionFromEnd(int)
+getHead(), printGuts(), getSize(), find(int)
 
-Availble methods for Nodes
-three constructors, getValue(), setNextNode(), getNextNodes()
 
 Used https://www.youtube.com/watch?v=ch1uQeu0PVY to get some clues on how to get two classes to interact with each other 
 
 ## Problem Domain
-Write a three methods called addToEnd(), addBefore(), and addAfter(), which creates a new Node in the linked list in various different spaces and orientations.
-Write a method called kFromEnd, which returns the value of the Node that is k from the end of the linked list.
+Implement your own linked list with associated utility functions
 
-## Notes
-This solution will break at the first index where target = input[i], so for cases where the target is present multiple times only the first index will be returned
-Because my linked knows who to activate and not who activated it, traveling backwards can be difficult, luckily k turns from the end can be expressed as size-k-1 from the start which allows us the same functionality. 
-## Visual
 
-### Solution addToEnd
-    input value
-    find node where node.point == null
-    newNode(value)
-    this.pointer <- newNode
-    newNode.pointer <- null
-
-### Solution addBefore
-    input value and target
-    find node.pointer == target
-    newNode(value)
-    this.pointer <- newNode
-    newNode.pointer <- target
-
-### Solution addAfter
-    input value, target
-    find node == target
-    newNode(value)
-    newNode.pointer <- this.pointer
-    this.point <- newNode
-    
-### Solution KFromEnd
-    input k
-    find LL size
-    Travel down linkedlist size-k-1 times
-    return that nodes value
-    
 ## Approach and Efficiency
-O(n)
+| Linked List Methods                     | Functionality                                                                                                                       | Space | Time |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
+| `addToStart(int value)`                 | creates a new Node with a value of value, places the new node at the front of the Linked List and points it at the previous head     | O(1)  | O(n) |
+| `addToEnd(int value)`                   | creates a new Node with a value of value, points the last node in the Linked List at the new node                                    | O(1)  | O(n) |
+| `addBefore(int value, int target) `     | creates a new Node with a value of value, and points the node before the target at the new node                                      | O(1)  | O(n) |
+| `addAfter(int value, int target)`       | creates a new Node with a value of value, and points the node at target at the new Node                                              | O(1)  | O(n) |
+| `positionsFromEnd(int k)`               | returns the value of the Node that is k Nodes from the end of the Linked List                                                        | O(1)  | O(n) |
+| `mergeLists(LinkedList 1, LinkedList 2` | returns a new Linked List which is a zippered compliation of two Linked List                                                         | O(n)  | O(n) |
+| `printGuts()`                           | flips through a linked list and makes a int[] to print to the console                                                                | O(n)  | O(n) |
+| `getSize()`                             | returns an int representing the number of nodes in a Linked List                                                                     | O(1)  | O(1) |
+| `getHead()`                             | returns the Node that is at the head of a Linked List                                                                                | O(1)  | O(1) |
+| `find(int target) `                     | returns the Node with value of target                                                                                                | O(1)  | O(n) | 
+
+| Node Methods                            | Functionality                                                                                                                         | Space | Time | 
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
+| `getValue()`                            | returns the value of a Node                                                                                                          | O(1)  | O(1) |
+| `setNextNode(Node N)`                   | sets Node to point at target node N                                                                                                  | O(1)  | O(1) |
+| `next()`                                | returns the Node the current Node is pointing towards                                                                                | O(1)  | O(1) |
+
 
 ## Whiteboard
 Whiteboarded with Merry Cimakasky
