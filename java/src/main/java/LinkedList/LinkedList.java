@@ -5,11 +5,10 @@ import java.util.Arrays;
 public class LinkedList {
     Node head;
     int listLength;
-    private Exception RuntimeException;
 
     public LinkedList() {
-        head = new Node();
-        listLength = 0;
+        this.head = null;
+        this.listLength = 0;
     }
 
     public int getHead() {
@@ -30,6 +29,7 @@ public class LinkedList {
             current = current.next();
         }
         Node newNode = new Node(value, null);
+        //is this line messing me up if I am adding it to the end of an empty linked list?
         current.setNextNode(newNode);
         this.listLength++;
         return newNode;
@@ -59,7 +59,7 @@ public class LinkedList {
 
     public int positionsFromEnd(int k) throws Exception {
         if (k > getSize() || k < 0) {
-            throw RuntimeException;
+            throw new Exception("Out of Bounds K Value");
         }
         Node current = head;
         for (int i = 0; i < getSize() - k - 1; i++) {
@@ -80,14 +80,33 @@ public class LinkedList {
         return guts;
     }
 
-    public static void main(String[] args) throws Exception {
-        LinkedList addToEnd = new LinkedList();
-        addToEnd.addToStart(7);
-        addToEnd.addToStart(8);
-        addToEnd.addToStart(9);
-        addToEnd.printGuts();
-        int output = addToEnd.positionsFromEnd(2);
-        System.out.println(output);
+
+    //this solution is not 0(1) for space. I couldn't figure that one out. Here's my submission just to get submission
+    public static LinkedList mergeLists(LinkedList list1, LinkedList list2) {
+        Node leader = list1.head;
+        Node laggard = list2.head;
+        LinkedList output = new LinkedList();
+
+        // I think my add to end has a hard time with empty LL, doing this is just to instantiate the LL before the loop
+        // I addressed the above bug, the default Linked List constructor no longer instantiates with an empty node. Check
+        // the tests, see if anything broke. This works great. But check anyway.
+        output.addToStart(leader.value);
+        output.addToEnd(laggard.value);
+
+        int cycles = list1.getSize() > list2.getSize() ? list1.getSize() : list2.getSize();
+
+        for (int i = 0; i < cycles; i++) {
+            leader = leader.next();
+            laggard = laggard.next();
+            if (leader != null) {
+                output.addToEnd(leader.value);
+            }
+            if (laggard != null) {
+                output.addToEnd(laggard.value);
+            }
+
+        }
+        return output;
     }
 
     public int getSize() {
@@ -104,52 +123,5 @@ public class LinkedList {
             current = current.next();
         }
         return null;
-    }
-
-//    public boolean remove(int data) {
-//        Node thisNode = this.head;
-//        Node prevNode = null;
-//
-//        while (thisNode != null) {
-//            if (prevNode != null) {
-//                prevNode.setNextNode(thisNode.next());
-//            } else {
-//                this.head = null;
-//                this.setSize(this.getSize() - 1);
-//                return true;
-//            }
-//            prevNode = thisNode;
-//            thisNode = thisNode.next();
-//        }
-//        return false;
-//    }
-
-    public class Node {
-        private Node pointer;
-        private int value;
-
-        private Node() {
-        }
-
-        private Node(int val) {
-            value = val;
-        }
-
-        private Node(int val, Node next) {
-            value = val;
-            pointer = next;
-        }
-
-        public int getValue() {
-            return this.value;
-        }
-
-        private void setNextNode(Node n) {
-            this.pointer = n;
-        }
-
-        public Node next() {
-            return this.pointer;
-        }
     }
 }
