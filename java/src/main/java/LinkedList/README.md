@@ -37,3 +37,6 @@ Whiteboarded with Merry Cimakasky
 
 Whiteboarded with Dana Vors
 [linkedListKFromEnd Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/linkedListKFromEnd.jpg)
+
+Whiteboarded with Nicole Kalbfelisch
+[linkedListMergeLists](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/mergeLists.jpg)
