@@ -6,14 +6,43 @@ public class Queue implements Datastructure {
     int queueLength;
 
     public Queue() {
-        this.front = null;
-        this.tail = null;
-        this.queueLength = 0;
+        Node tail = new Node(1, null);
+        Node head = new Node(0, tail);
+        this.front = head;
+        this.tail = tail;
+        this.queueLength = 2;
+    }
+
+    public Node peek() {
+        return this.front;
+    }
+
+    public Node peer() {
+        return this.tail;
+    }
+
+    public void enqueue(int value) {
+        Node newNode = new Node(value, null);
+        tail.pointer = newNode;
+        tail = newNode;
+        queueLength++;
+    }
+
+    public Node dequeue() {
+        if (this.peek() == null) {
+            System.out.println("Cannot Pop off of an empty list");
+            return null;
+        }
+        Node output = front;
+        front = front.next();
+        output.pointer = null;
+        this.queueLength--;
+        return output;
     }
 
     @Override
     public int[] printGuts() {
-        Node current = this.tail;
+        Node current = this.front;
         int[] guts = new int[this.getSize()];
 
         for (int i = 0; i < this.getSize(); i++) {

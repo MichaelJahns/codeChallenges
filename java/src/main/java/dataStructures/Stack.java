@@ -13,7 +13,7 @@ public class Stack implements Datastructure {
         return this.head;
     }
 
-    public void push(int value) {
+    public void enqueue(int value) {
         Node newNode = new Node(value, head);
         this.head = newNode;
         this.stackHeight++;
