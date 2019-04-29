@@ -1,11 +1,11 @@
-package testLinkedList;
+package testDataStructures;
 
-import LinkedList.LinkedList;
+import dataStructures.LinkedList;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static LinkedList.LinkedList.mergeLists;
+import static dataStructures.LinkedList.mergeLists;
 import static junit.framework.TestCase.*;
 
 public class testLinkedList {
@@ -180,12 +180,12 @@ public class testLinkedList {
             String expected = "Out of Bounds K Value";
             assertEquals("Unexpected Exception", expected, e.getMessage());
         }
-        //k = length of LinkedList
+        //k = length of dataStructures
         int expected = 0;
         int actual = testFromEnd.positionsFromEnd(6);
         assertEquals("Return didnt match expected", expected, actual);
 
-        //k <= length of LinkedList
+        //k <= length of dataStructures
         int expected2 = 1;
         int actual2 = testFromEnd.positionsFromEnd(4);
         assertEquals("Return didnt match expected", expected2, actual2);

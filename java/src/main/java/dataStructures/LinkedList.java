@@ -1,8 +1,8 @@
-package LinkedList;
+package dataStructures;
 
 import java.util.Arrays;
 
-public class LinkedList {
+public class LinkedList implements Datastructure {
     Node head;
     int listLength;
 
@@ -107,6 +107,24 @@ public class LinkedList {
 
         }
         return output;
+    }
+
+    public LinkedList reverse() {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while (current != null) {
+            //Saves in temp storage the next node, so its not lost when I change where current is pointing
+            next = current.next();
+            //on the first run, points old head to null, on subsequent runs when prev has a value, will reverse pointer
+            current.pointer = prev;
+            //fills previous on first run through, on subsequent runs this defines the direction
+            prev = current;
+            //pulls next from temp storage
+            current = next;
+        }
+        head = prev;
+        return this;
     }
 
     public int getSize() {
