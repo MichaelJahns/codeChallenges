@@ -27,6 +27,11 @@ Implement your own Queue
 | `getHead()`                             | returns the Node that is at the head of a Linked List                                                                                | O(1)  | O(1) |
 | `find(int target) `                     | returns the Node with value of target                                                                                                | O(1)  | O(n) | 
 
+### Stack
+
+A stack will add/remove Nodes to/from the head. This can be rephrased saying it follows a LIFO and FILO concept. The first Node added to the stack will be the last to be resolved, and the last
+Node added to the stack will be the first resolved. A real world example of this would be the call stack in our IDE's.
+
 | Stack Methods                           | Functionality                                                                                                                        | Space | Time |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
 | `peek()`                                | returns the Node at the stacks head                                                                                                  | O(1)  | O(1) |
@@ -34,6 +39,11 @@ Implement your own Queue
 | `getSize()`                             | returns an int representing the number of nodes in the stack                                                                         | O(1)  | O(1) |
 | `push(int value)`                       | creates a new node with a value of value, places the new node atop the stack, reassigns head to the new node                         | O(1)  | O(1) |
 | `pop()`                                 | returns and removes from the stack the current head                                                                                  | O(1)  | O(1) |
+
+### Queue
+
+A Queue will add Nodes to the tail, and remove Nodes from the front. This can be rephrased saying it follows a LILO concept, where the last Node added to Queue is the last to be resolved, and 
+and a FIFO concept where the first Node added to the Queue will be the first to be resolved. A real world example of this would be a line at a store. 
 
 | Queue Methods                           |         Functionality                                                                                                                | Space | Time |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
