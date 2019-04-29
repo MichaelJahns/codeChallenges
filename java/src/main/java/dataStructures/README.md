@@ -1,7 +1,9 @@
 # Data Structures
 ## Problem Domain
 Implement your own linked list with associated utility functions
+
 Implement your own Stack
+
 Implement your own Queue
 
 
