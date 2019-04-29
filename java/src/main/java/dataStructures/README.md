@@ -25,7 +25,7 @@ Implement your own Queue
 | `getHead()`                             | returns the Node that is at the head of a Linked List                                                                                | O(1)  | O(1) |
 | `find(int target) `                     | returns the Node with value of target                                                                                                | O(1)  | O(n) | 
 
-| Stack Methods                           |                                                                                                                                      | Space | Time |
+| Stack Methods                           | Functionality                                                                                                                        | Space | Time |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
 | `peek()`                                | returns the Node at the stacks head                                                                                                  | O(1)  | O(1) |
 | `printGuts()`                           | flips through a stack and makes a int[] to print to the console                                                                 | O(n)  | O(n) |
@@ -33,7 +33,7 @@ Implement your own Queue
 | `push(int value)`                       | creates a new node with a value of value, places the new node atop the stack, reassigns head to the new node                         | O(1)  | O(1) |
 | `pop()`                                 | returns and removes from the stack the current head                                                                                  | O(1)  | O(1) |
 
-| Queue Methods                           |                                                                                                                                      | Space | Time |
+| Queue Methods                           |         Functionality                                                                                                                | Space | Time |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
 | `peek()`                                | returns the Node at the queues front                                                                                                 | O(1)  | O(1) |
 | `peer()`                                | returns the Node at the queues tail                                                                                                  | O(1)  | O(1) |
