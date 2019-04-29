@@ -1,6 +1,4 @@
-# Linked List
-Used https://www.youtube.com/watch?v=ch1uQeu0PVY to get some clues on how to get two classes to interact with each other 
-
+# Data Structures
 ## Problem Domain
 Implement your own linked list with associated utility functions
 Implement your own Stack
@@ -43,6 +41,9 @@ Implement your own Queue
 | `getSize()`                             | returns an int representing the number of nodes in the queue                                                                         | O(1)  | O(1) |
 | `enqueue(int value)`                    | creates a new Node with a value of value, and places that node as the the new tail in a queue                                        | O(1)  | O(1) |
 | `dequeue()`                             | returns and removes from the queue the current front                                                                                 | O(1)  | O(1) |
+
+## Resources 
+[Linked Lists Explained](https://www.youtube.com/watch?v=ch1uQeu0PVY) video made by Joe James, I used this resource to get some context on how to get two classes to interact with each other 
 
 ## Whiteboard
 Whiteboarded with Merry Cimakasky
