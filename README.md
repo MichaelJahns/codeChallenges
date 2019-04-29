@@ -14,5 +14,5 @@ Coded by Michael J
 | 4-15-19 | Reverse an Array              | Java | [link](/java/src/main/arrayReverse/) |
 | 4-16-19 | insertArrayShift              | Java | [link](/java/src/main/java/array_shift/) |
 | 4-22-19 | LinkedList                    | Java | [link](/java/src/main/java/LinkedList/) |
-| 4-29-19 | Stacks and Queues             | Java | [link])/java/src/main/java/dataStructures/ |
+| 4-29-19 | Stacks and Queues             | Java | [link](/java/src/main/java/dataStructures/) |
 
