@@ -5,9 +5,8 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
+import static LinkedList.LinkedList.mergeLists;
+import static junit.framework.TestCase.*;
 
 public class testLinkedList {
 
@@ -77,23 +76,29 @@ public class testLinkedList {
     public void testHead() {
         LinkedList header = new LinkedList();
         header.addToStart(1);
+        assertEquals("The head node wasn't as expected", 1, header.getHead());
         header.addToStart(2);
         header.addToStart(3);
+        assertEquals("The head node wasn't as expected", 3, header.getHead());
         header.addToStart(4);
         header.addToStart(5);
-
         assertEquals("The head node wasnt as expected", 5, header.getHead());
     }
 
     @Test
     public void testMultipleInsertions() {
         LinkedList multipleInsertions = new LinkedList();
+        assertTrue("List was an unexpected size", 0 == multipleInsertions.getSize());
+        assertFalse("List was an unexpected size", 0 != multipleInsertions.getSize());
+
         multipleInsertions.addToStart(35);
         multipleInsertions.addToStart(4);
+        assertTrue("List was an unexpected size", 2 == multipleInsertions.getSize());
+        assertFalse("List was an unexpected size", 2 != multipleInsertions.getSize());
+
         multipleInsertions.addToStart(7);
         multipleInsertions.addToStart(-12);
         multipleInsertions.addToStart(0);
-
         assertTrue("List was an unexpected size", 5 == multipleInsertions.getSize());
         assertFalse("List was an unexpected size", 5 != multipleInsertions.getSize());
     }
@@ -117,22 +122,28 @@ public class testLinkedList {
     @Test
     public void testPrintGuts() {
         LinkedList arrangedList = new LinkedList();
+        int[] expected1 = {};
+        int[] actual1 = arrangedList.printGuts();
+        assertEquals("List was formatting wasn't as expected", Arrays.toString(expected1), Arrays.toString(actual1));
+
         arrangedList.addToStart(0);
         arrangedList.addToStart(1);
         arrangedList.addToStart(2);
         arrangedList.addToStart(3);
         arrangedList.addToStart(4);
         arrangedList.addToStart(5);
+        int[] expected2 = {5, 4, 3, 2, 1, 0};
+        int[] actual2 = arrangedList.printGuts();
+        assertEquals("List was formatting wasn't as expected", Arrays.toString(expected2), Arrays.toString(actual2));
+
         arrangedList.addToStart(6);
         arrangedList.addToStart(7);
         arrangedList.addToStart(8);
         arrangedList.addToStart(9);
         arrangedList.addToStart(10);
-
-        int[] expected = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-        int[] actual = arrangedList.printGuts();
-
-        assertEquals("List was formatting wasn't as expected", Arrays.toString(expected), Arrays.toString(actual));
+        int[] expected3 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        int[] actual3 = arrangedList.printGuts();
+        assertEquals("List was formatting wasn't as expected", Arrays.toString(expected3), Arrays.toString(actual3));
     }
 
     @Test
@@ -145,7 +156,30 @@ public class testLinkedList {
         testFromEnd.addToStart(1);
         testFromEnd.addToStart(0);
 
-
+        // K > Length of Linked List
+        try {
+            testFromEnd.positionsFromEnd(10);
+            fail();
+        } catch (Exception e) {
+            String expected = "Out of Bounds K Value";
+            assertEquals("Unexpected Exception", expected, e.getMessage());
+        }
+        //K && Linked List Length = 1
+        try {
+            int expected = 5;
+            int actual = testFromEnd.positionsFromEnd(0);
+            assertEquals("Unexepted someting", expected, actual);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //K != Positive Integer
+        try {
+            testFromEnd.positionsFromEnd(10);
+            fail();
+        } catch (Exception e) {
+            String expected = "Out of Bounds K Value";
+            assertEquals("Unexpected Exception", expected, e.getMessage());
+        }
         //k = length of LinkedList
         int expected = 0;
         int actual = testFromEnd.positionsFromEnd(6);
@@ -158,22 +192,36 @@ public class testLinkedList {
     }
 
     @Test
-    public void testPostitionsFromEndEdge() throws Exception {
-        LinkedList exceptional = new LinkedList();
-        exceptional.addToStart(10);
+    public void testMergeLists() {
+        LinkedList one = new LinkedList();
+        one.addToStart(9);
+        one.addToStart(7);
+        one.addToStart(5);
+        one.addToStart(3);
+        one.addToStart(1);
 
-        //k > length of LinkedList expect exception
-        //How do I assert an exception?
-        // assertEquals(1, exceptional.positionsFromEnd(10));
-        // fail();
+        LinkedList two = new LinkedList();
+        two.addToStart(10);
+        two.addToStart(8);
+        two.addToStart(6);
+        two.addToStart(4);
+        two.addToStart(2);
 
-        // Length of Linked List = 1
-        assertEquals(10, exceptional.positionsFromEnd(0));
+        LinkedList expected = new LinkedList();
+        expected.addToStart(1);
+        expected.addToEnd(2);
+        expected.addToEnd(3);
+        expected.addToEnd(4);
+        expected.addToEnd(5);
+        expected.addToEnd(6);
+        expected.addToEnd(7);
+        expected.addToEnd(8);
+        expected.addToEnd(9);
+        expected.addToEnd(10);
+        LinkedList actual = mergeLists(one, two);
 
-        //k != positive integer
-        // How do I assert an exception?
-//        assertEquals(1, exceptional.positionsFromEnd(-2));
-//        fail();
-
+        assertEquals("Lists did not merge as expected", Arrays.toString(expected.printGuts()), Arrays.toString(actual.printGuts()));
+        assertTrue("Merged List does not have expected length", actual.getSize() == 10);
+        assertFalse("Merged List does not have expected length", actual.getSize() != 10);
     }
 }
