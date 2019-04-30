@@ -38,6 +38,7 @@ public class Psuedoqueue {
         return output;
     }
 
+    //Doesnt have the utility I hoped it would
     public Object[] print() {
         int[] outputEncode = new int[encode.getSize()];
         int[] outputDecode = new int[decode.getSize()];
