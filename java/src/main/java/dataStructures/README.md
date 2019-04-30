@@ -52,7 +52,20 @@ and a FIFO concept where the first Node added to the Queue will be the first to 
 | `printGuts()`                           | flips through a queue and makes a int[] to print to the console                                                                      | O(n)  | O(n) |
 | `getSize()`                             | returns an int representing the number of nodes in the queue                                                                         | O(1)  | O(1) |
 | `enqueue(int value)`                    | creates a new Node with a value of value, and places that node as the the new tail in a queue                                        | O(1)  | O(1) |
-| `dequeue()`                             | returns and removes from the queue the current front                                                                                 | O(1)  | O(1) |
+| `dequeue()`                             | returns and removes from the queue the current front                                                                                 | O(1)  | O(1) | 
+
+### Psuedoqueue
+
+A Psuedoqueue is two stacks, named Encode and Decode, that emmulate a Queue. Meaning that instead LIFO and FILO concepts, follows LILO and FIFO concepts.
+This is possible due to a private method `reverse()` that will move and flip the Nodes from one stack to another as need be. 
+Reverse will move the Nodes to Decode when a Dequeue is ordered. Nodes in the Decode Stack are arranged oldest to newest with the first Node added at the head, this means that a `pop()` will remove the first Nodes added. 
+Reverse will move the Nodes to Encode when a Enqueue is ordered. Nodes in the Encode Stack are arranged newest to oldest with the last Node added at the head, this means that a `push(int value)` will add a Node keeping the order of the Stack. 
+
+
+| Psuedoqueue Methods                     | Functinality                                                                                                                         | Space | Time |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|-------|------|
+| `psuedoEnqueue(int value)`              | If decodes head is not null, will start by running reverse(decode) before pushing a New Node on top of Encode                        | O(1)  | O(n) |
+| `psuedoDequeue()   `                    | If encodes head is not null, will start by running reverse(encode) before poping a Node off of Decode                                | O(1)  | O(n) |
 
 ## Resources 
 [Linked Lists Explained](https://www.youtube.com/watch?v=ch1uQeu0PVY) video made by Joe James, I used this resource to get some context on how to get two classes to interact with each other 
@@ -66,3 +79,6 @@ Whiteboarded with Dana Vors
 
 Whiteboarded with Nicole Kalbfelisch
 [linkedListMergeLists](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/mergeLists.jpg)
+
+Whiteboarded with Jessica Zuchowski
+[Psuedoqueue](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/psuedoQueue.jpg)
