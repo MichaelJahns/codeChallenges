@@ -20,15 +20,57 @@ public class testLinkedList {
     }
 
     @Test
-    public void testInsertion() {
-        LinkedList oneInsertion = new LinkedList();
-        oneInsertion.addToStart(7);
+    public void testAddtoStart() {
+        LinkedList addToStart = new LinkedList();
+        addToStart.addToStart(7);
         //True
-        assertEquals(7, oneInsertion.find(7).getValue());
-        assertTrue(1 == oneInsertion.getSize());
+        assertEquals(7, addToStart.find(7).getValue());
+        assertTrue(1 == addToStart.getSize());
         //False
-        assertEquals(null, oneInsertion.find(14));
-        assertFalse(1 != oneInsertion.getSize());
+        assertEquals(null, addToStart.find(14));
+        assertFalse(1 != addToStart.getSize());
+    }
+
+    @Test
+    public void testAddtoEnd() {
+        LinkedList addToEnd = new LinkedList();
+        addToEnd.addToStart(7);
+        addToEnd.addToStart(8);
+        addToEnd.addToStart(9);
+        addToEnd.addToEnd(0);
+
+        int[] expected = {9, 8, 7, 0};
+        //True
+        assertEquals(Arrays.toString(expected), Arrays.toString(addToEnd.printGuts()));
+        assertTrue(4 == addToEnd.getSize());
+    }
+
+    @Test
+    public void testAddBefore() {
+        LinkedList addBefore = new LinkedList();
+        addBefore.addToStart(7);
+        addBefore.addToStart(8);
+        addBefore.addToStart(9);
+        addBefore.addBefore(10, 7);
+
+        int[] expected = {9, 8, 10, 7};
+        //True
+        assertEquals(Arrays.toString(expected), Arrays.toString(addBefore.printGuts()));
+        assertTrue(4 == addBefore.getSize());
+    }
+
+    @Test
+    public void testAddAfter() {
+        LinkedList addAfter = new LinkedList();
+        addAfter.addToStart(7);
+        addAfter.addToStart(8);
+        addAfter.addToStart(9);
+        addAfter.addAfter(10, 8);
+
+        int[] expected = {9, 8, 10, 7};
+        //True
+        assertEquals(Arrays.toString(expected), Arrays.toString(addAfter.printGuts()));
+        assertTrue(4 == addAfter.getSize());
     }
 
     @Test
