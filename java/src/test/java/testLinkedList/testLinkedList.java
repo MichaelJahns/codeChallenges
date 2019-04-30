@@ -16,7 +16,7 @@ public class testLinkedList {
         LinkedList empty = new LinkedList();
         int expected = 0;
         int actual = empty.getSize();
-        assertEquals("Linked list length =/= expected", expected, actual);
+        assertEquals("Linked list length <> expected", expected, actual);
     }
 
     @Test
@@ -24,11 +24,11 @@ public class testLinkedList {
         LinkedList addToStart = new LinkedList();
         addToStart.addToStart(7);
         //True
-        assertEquals(7, addToStart.find(7).getValue());
-        assertTrue(1 == addToStart.getSize());
+        assertEquals("Node with with specified value not found", 7, addToStart.find(7).getValue());
+        assertTrue("List has an unexpected number of items", 1 == addToStart.getSize());
         //False
-        assertEquals(null, addToStart.find(14));
-        assertFalse(1 != addToStart.getSize());
+        assertEquals("List has isn't returning null for items not present", null, addToStart.find(14));
+        assertFalse("List has an unexpected number of items", 1 != addToStart.getSize());
     }
 
     @Test
@@ -41,8 +41,8 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 7, 0};
         //True
-        assertEquals(Arrays.toString(expected), Arrays.toString(addToEnd.printGuts()));
-        assertTrue(4 == addToEnd.getSize());
+        assertEquals("List formatting different than expected", Arrays.toString(expected), Arrays.toString(addToEnd.printGuts()));
+        assertTrue("List was an unexpected size", 4 == addToEnd.getSize());
     }
 
     @Test
@@ -55,8 +55,8 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 10, 7};
         //True
-        assertEquals(Arrays.toString(expected), Arrays.toString(addBefore.printGuts()));
-        assertTrue(4 == addBefore.getSize());
+        assertEquals("List formatting different than expected", Arrays.toString(expected), Arrays.toString(addBefore.printGuts()));
+        assertTrue("List was an unexpected size", 4 == addBefore.getSize());
     }
 
     @Test
@@ -69,8 +69,8 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 10, 7};
         //True
-        assertEquals(Arrays.toString(expected), Arrays.toString(addAfter.printGuts()));
-        assertTrue(4 == addAfter.getSize());
+        assertEquals("List formatting was different than expected", Arrays.toString(expected), Arrays.toString(addAfter.printGuts()));
+        assertTrue("List was an unexpected size", 4 == addAfter.getSize());
     }
 
     @Test
@@ -82,7 +82,7 @@ public class testLinkedList {
         header.addToStart(4);
         header.addToStart(5);
 
-        assertEquals(5, header.getHead());
+        assertEquals("The head node wasnt as expected", 5, header.getHead());
     }
 
     @Test
@@ -94,8 +94,8 @@ public class testLinkedList {
         multipleInsertions.addToStart(-12);
         multipleInsertions.addToStart(0);
 
-        assertTrue(5 == multipleInsertions.getSize());
-        assertFalse(5 != multipleInsertions.getSize());
+        assertTrue("List was an unexpected size", 5 == multipleInsertions.getSize());
+        assertFalse("List was an unexpected size", 5 != multipleInsertions.getSize());
     }
 
     @Test
@@ -105,13 +105,13 @@ public class testLinkedList {
         finder.addToStart(4);
         finder.addToStart(35);
         //True
-        assertEquals(7, finder.find(7).getValue());
-        assertEquals(4, finder.find(4).getValue());
-        assertEquals(35, finder.find(35).getValue());
+        assertEquals("Couldnt find value", 7, finder.find(7).getValue());
+        assertEquals("Couldnt find value", 4, finder.find(4).getValue());
+        assertEquals("Couldnt find value", 35, finder.find(35).getValue());
         //False
-        assertEquals(null, finder.find(104));
-        assertEquals(null, finder.find(42));
-        assertEquals(null, finder.find(-8));
+        assertEquals("Unexpected value found", null, finder.find(104));
+        assertEquals("Unexpected value found", null, finder.find(42));
+        assertEquals("Unexpected value found", null, finder.find(-8));
     }
 
     @Test
@@ -132,6 +132,48 @@ public class testLinkedList {
         int[] expected = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         int[] actual = arrangedList.printGuts();
 
-        assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+        assertEquals("List was formatting wasn't as expected", Arrays.toString(expected), Arrays.toString(actual));
+    }
+
+    @Test
+    public void testPositionsFromEnd() throws Exception {
+        LinkedList testFromEnd = new LinkedList();
+        testFromEnd.addToStart(5);
+        testFromEnd.addToStart(4);
+        testFromEnd.addToStart(3);
+        testFromEnd.addToStart(2);
+        testFromEnd.addToStart(1);
+        testFromEnd.addToStart(0);
+
+
+        //k = length of LinkedList
+        int expected = 0;
+        int actual = testFromEnd.positionsFromEnd(6);
+        assertEquals("Return didnt match expected", expected, actual);
+
+        //k <= length of LinkedList
+        int expected2 = 1;
+        int actual2 = testFromEnd.positionsFromEnd(4);
+        assertEquals("Return didnt match expected", expected2, actual2);
+    }
+
+    @Test
+    public void testPostitionsFromEndEdge() throws Exception {
+        LinkedList exceptional = new LinkedList();
+        exceptional.addToStart(10);
+
+        //k > length of LinkedList expect exception
+        //How do I assert an exception?
+        // assertEquals(1, exceptional.positionsFromEnd(10));
+        // fail();
+
+        // Length of Linked List = 1
+        assertEquals(10, exceptional.positionsFromEnd(0));
+
+        //k != positive integer
+        // How do I assert an exception?
+//        assertEquals(1, exceptional.positionsFromEnd(-2));
+//        fail();
+
     }
 }
