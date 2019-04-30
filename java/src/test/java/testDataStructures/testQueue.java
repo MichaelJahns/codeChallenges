@@ -32,6 +32,7 @@ Can successfully instantiate an empty queue
         testEnqueue.enqueue(1);
         assertEquals("Front had an unexpected value", 0, testEnqueue.peek().value);
         assertEquals("Tail had an unexpected value", 1, testEnqueue.peer().value);
+        assertEquals("Tail had an unexpected pointer", null, testEnqueue.peer().pointer);
         assertEquals("Queue had an unexpected size", 3, testEnqueue.getSize());
     }
 
