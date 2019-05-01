@@ -16,3 +16,4 @@ Coded by Michael J
 | 4-22-19 | LinkedList                    | Java | [link](/java/src/main/java/dataStructures/) |
 | 4-29-19 | Stacks and Queues             | Java | [link](/java/src/main/java/dataStructures/) |
 | 4-30-19 | Pseuqdoqueue                  | Java | [link](/java/src/main/java/dataStructures/) | 
+| 5-1-19  | Animal Shelter                | Java | [link](/java/src/main/java/dataStructures/animalShelter/) |
