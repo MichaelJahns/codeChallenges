@@ -2,7 +2,7 @@
 Create a data structure with a FIFO principal, but users can select if they want to dequeue a cat or a dog by preference
 
 
-|  Method                             | Functionality                                                                                                                                                       | Space  | Time  |         
+|Methods                              | Functionality                                                                                                                                                       | Space  | Time  |         
 |-------------------------------------|------------------------------------------- -------------------------------------------------------------------------------------------------------------------------|--------|-------|
 | `peek()`                            | Returns the shelters Front, the animal thats been waiting the longest                                                                                               |  O(1)  | O(1)  |
 | `peer()`                            | Returns the shelters Tail, the animal thats been waiting the shortest                                                                                               |  O(1)  | O(1)  |
