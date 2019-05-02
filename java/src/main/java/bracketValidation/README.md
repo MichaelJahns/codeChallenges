@@ -18,4 +18,4 @@
  
  If my script encounters one of the opening characters, `(, [, or {` it will add it to the hash. If my script encounters a closing character, it will remove the associated front half from the Hash. Because the return is a boolean that means that a string `(` is just as wrong `(((((`, which is a consideration of my script. If the problem domain needed a count of unclosed brackets, another solution would be needed. 
  
- [Whiteboard](link)
+ [Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/bracketValidation.jpg)
