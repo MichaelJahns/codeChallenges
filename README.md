@@ -21,3 +21,4 @@ Coded by Michael J
 | 4-30-19 | Pseuqdoqueue                  | [link](/java/src/main/java/dataStructures/)               | 
 | 4-31-19 | Animal Shelter                | [link](/java/src/main/java/dataStructures/animalShelter/) |
 | 5-1-19  | Bracket Validation            | [link](/java/src/main/java/bracketValidation/)            |
+| 5-6-19  | Binary Tree                   | [link](/java/src/main/java/dataStructures/trees/)         |
