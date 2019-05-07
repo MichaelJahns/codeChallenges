@@ -3,7 +3,7 @@ package dataStructures.trees;
 public class Node {
     public Node left;
     public Node right;
-    public long value;
+    public Object value;
 
     public Node() {
     }

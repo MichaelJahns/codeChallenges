@@ -1,13 +1,13 @@
 package testDataStructures.testTrees;
 
+import dataStructures.trees.BinaryTree;
 import dataStructures.trees.Node;
-import dataStructures.trees.binaryTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static dataStructures.trees.binaryTree.randomNode;
+import static dataStructures.trees.BinaryTree.randomNode;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -15,13 +15,13 @@ public class testBinaryTree {
 
     @Test
     public void testInstantiate() {
-        binaryTree tree = new binaryTree();
+        BinaryTree tree = new BinaryTree();
         assertNull("Root was not null", tree.root());
     }
 
     @Test
     public void testInstantiateWithRoot() {
-        binaryTree rootedTree = new binaryTree(1);
+        BinaryTree rootedTree = new BinaryTree(1);
         assertEquals("Unexpected value at null", 1, rootedTree.root().value);
         assertNull("Left was not null", rootedTree.root().left);
         assertNull("Right was not null", rootedTree.root().right);
@@ -29,7 +29,7 @@ public class testBinaryTree {
 
     @Test
     public void testAddLeftRight() {
-        binaryTree rootedTree = new binaryTree(1);
+        BinaryTree rootedTree = new BinaryTree(1);
         Node left = randomNode();
         Node right = randomNode();
         rootedTree.root().left = left;
@@ -45,7 +45,7 @@ public class testBinaryTree {
 
     @Test
     public void testInOrder() {
-        binaryTree rootedTree = new binaryTree();
+        BinaryTree rootedTree = new BinaryTree();
         Node root = randomNode();
         Node left = randomNode();
         Node right = randomNode();
@@ -69,7 +69,7 @@ public class testBinaryTree {
 
     @Test
     public void testPostOrder() {
-        binaryTree rootedTree = new binaryTree();
+        BinaryTree rootedTree = new BinaryTree();
         Node root = randomNode();
         Node left = randomNode();
         Node right = randomNode();
@@ -93,7 +93,7 @@ public class testBinaryTree {
 
     @Test
     public void testPreOrder() {
-        binaryTree rootedTree = new binaryTree();
+        BinaryTree rootedTree = new BinaryTree();
         Node root = randomNode();
         Node left = randomNode();
         Node right = randomNode();

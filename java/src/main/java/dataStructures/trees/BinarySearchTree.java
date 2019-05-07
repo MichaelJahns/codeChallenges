@@ -1,6 +1,6 @@
 package dataStructures.trees;
 
-public class binarySearchTree extends binaryTree {
+public class BinarySearchTree extends BinaryTree {
     private Node add(Node node, int value) {
         if (node == null) {
             node = new Node(value);

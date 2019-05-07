@@ -2,14 +2,14 @@ package dataStructures.trees;
 
 import java.util.List;
 
-public class binaryTree {
+public class BinaryTree {
     private Node root;
 
-    public binaryTree() {
+    public BinaryTree() {
         this.root = null;
     }
 
-    public binaryTree(int value) {
+    public BinaryTree(T value) {
         this.root = new Node(value);
     }
 
