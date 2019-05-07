@@ -1,5 +1,6 @@
 package testDataStructures.testTrees;
 
+import dataStructures.trees.BinarySearchTree;
 import dataStructures.trees.BinaryTree;
 import dataStructures.trees.Node;
 import org.junit.Test;
@@ -7,7 +8,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static dataStructures.trees.BinarySearchTree.generate;
 import static dataStructures.trees.BinaryTree.randomNode;
+import static dataStructures.trees.FizzBuzzTree.FizzBuzz;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -53,12 +56,12 @@ public class testBinaryTree {
         rootedTree.root().left = left;
         rootedTree.root().right = right;
 
-        List<Long> expected = new ArrayList<>();
+        List<Object> expected = new ArrayList<>();
         expected.add(left.getValue());
         expected.add(root.getValue());
         expected.add(right.getValue());
 
-        List<Long> output = new ArrayList<>();
+        List<Object> output = new ArrayList<>();
         output = rootedTree.inOrder(output, rootedTree.root());
 
         assertEquals("Unexpected head", root, rootedTree.root());
@@ -77,12 +80,12 @@ public class testBinaryTree {
         rootedTree.root().left = left;
         rootedTree.root().right = right;
 
-        List<Long> expected = new ArrayList<>();
+        List<Object> expected = new ArrayList<>();
         expected.add(left.getValue());
         expected.add(right.getValue());
         expected.add(root.getValue());
 
-        List<Long> output = new ArrayList<>();
+        List<Object> output = new ArrayList<>();
         output = rootedTree.postOrder(output, rootedTree.root());
 
         assertEquals("Unexpected head", root, rootedTree.root());
@@ -101,17 +104,37 @@ public class testBinaryTree {
         rootedTree.root().left = left;
         rootedTree.root().right = right;
 
-        List<Long> expected = new ArrayList<>();
+        List<Object> expected = new ArrayList<>();
         expected.add(root.getValue());
         expected.add(left.getValue());
         expected.add(right.getValue());
 
-        List<Long> output = new ArrayList<>();
+        List<Object> output = new ArrayList<>();
         output = rootedTree.preOrder(output, rootedTree.root());
 
         assertEquals("Unexpected head", root, rootedTree.root());
         assertEquals("Unexpected left", left, rootedTree.root().left);
         assertEquals("Unexpected right", right, rootedTree.root().right);
         assertEquals("Unexpected print", expected, output);
+    }
+
+    @Test
+    public void testFizzBuzz() {
+        BinarySearchTree tree = generate();
+        BinarySearchTree FizzyBuzz = FizzBuzz(tree);
+
+        assertEquals("Unexpected value of root", "Buzz", FizzyBuzz.root().getValue());
+        assertEquals("Unexpected value of root", "Fizz", FizzyBuzz.root().right.getValue());
+        assertEquals("Unexpected value of root", "FizzBuzz", FizzyBuzz.root().left.getValue());
+    }
+
+    @Test
+    public void testFizzyFailures() {
+
+    }
+
+    @Test
+    public void testFizzyEdges() {
+
     }
 }

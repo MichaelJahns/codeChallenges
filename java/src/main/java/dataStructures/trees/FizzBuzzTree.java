@@ -1,29 +1,28 @@
 package dataStructures.trees;
 
-import java.util.List;
+import static dataStructures.trees.BinarySearchTree.generate;
 
 public class FizzBuzzTree {
     public static void main(String args[]) {
-        BinaryTree tree = new BinaryTree();
+        BinarySearchTree tree = generate();
         FizzBuzz(tree);
     }
 
-    public static BinaryTree FizzBuzz(BinaryTree tree) {
+    public static BinarySearchTree FizzBuzz(BinarySearchTree tree) {
         Node node = tree.root();
-        List<String> output = null;
-        BinaryTree FizzyTree = FizzBuzzRec(node, tree);
-        return FizzyTree;
+        BinarySearchTree FizzyTree = FizzBuzzRec(node, tree);
 
+        return FizzyTree;
     }
 
 
     //https://codereview.stackexchange.com/questions/60145/which-fizzbuzz-is-better-and-why
-    // I found this hyper optimization researching how I am supposed to have one object try and hold two different types of Objects
-    private static BinaryTree FizzBuzzRec(Node node, BinaryTree tree) {
+    // I found this hyper optimization researching how I am supposed to have one object try and hold two different types of data
+    private static BinarySearchTree FizzBuzzRec(Node node, BinarySearchTree tree) {
         if (node == null) {
             return null;
         }
-        switch (node.value % 15) {
+        switch ((int) node.value % 15) {
             case 0:
                 node.value = "FizzBuzz";
                 break;

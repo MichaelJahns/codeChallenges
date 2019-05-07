@@ -8,13 +8,13 @@ public class Node {
     public Node() {
     }
 
-    public Node(long value) {
+    public Node(Object value) {
         this.value = value;
         this.left = null;
         this.right = null;
     }
 
-    public Node(long value, Node left, Node right) {
+    public Node(Object value, Node left, Node right) {
         this.value = value;
         this.left = left;
         this.right = right;
@@ -28,7 +28,7 @@ public class Node {
         this.right = node;
     }
 
-    public long getValue() {
+    public Object getValue() {
         return this.value;
     }
 
