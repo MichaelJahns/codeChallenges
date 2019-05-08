@@ -2,10 +2,10 @@
 
 | Binary Tree Methods               | Functionality                                                                                                 |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------|
-| `inOrder(List<Long>, Node node)`  | Returns a `List<Long>` holding the value of all Nodes in the tree ordered Left Branches, root, Right Branches |       |
+| `inOrder(List<Long>, Node node)`  | Returns a `List<Long>` holding the value of all Nodes in the tree ordered Left Branches, root, Right Branches |  
 | `preOrder(List<Long>, Node node)` | Returns a `List<Long>` holding the value of all Nodes in the tree ordered Node, Left Branches, Right Branches |
 | `postOrder(List<Long>, Node node)`| Returns a `List<Long>` holding the value of all Nodes in the tree orderd Left Branches, Right Branches, Root  |
-
+| `BFSOrder()`                      | Prints to the console every node in the tree following a left to right, breadth first approach                |
 
 | Binary Search Tree Methods  | Functionality                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -16,8 +16,14 @@
 
 ### Research
 https://codereview.stackexchange.com/questions/60145/which-fizzbuzz-is-better-and-why
-I found this link with an optimized Switch case solution to a standard array based fizz buzz.
-I found this accidentally looking for how in Java you can have an object hold a String or int, and still be able to compare it 
-###
+
+Looking for how to get a Java Object to hold either a String or int, and still be able to compare it, I found the above resource which
+has the super optimized switch case solution with a standard array based fizzbuzz
+
+https://www.geeksforgeeks.org/level-order-tree-traversal/
+
+I could not conceptualize how a BFS would work in my head, the above resource was very helpful in getting me into the realm of understanding
+### Assets
 [FizzBuzzTree Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/FizzBuzz.jpg)
+
 [BreadthFirstTravesals Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/BreadthFirstTravesal.jpg)
