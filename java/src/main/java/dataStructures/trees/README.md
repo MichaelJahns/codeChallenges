@@ -18,3 +18,5 @@
 https://codereview.stackexchange.com/questions/60145/which-fizzbuzz-is-better-and-why
 I found this link with an optimized Switch case solution to a standard array based fizz buzz.
 I found this accidentally looking for how in Java you can have an object hold a String or int, and still be able to compare it 
+###
+[FizzBuzzTree Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/FizzBuzz.jpg)
