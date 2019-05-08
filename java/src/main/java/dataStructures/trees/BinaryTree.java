@@ -1,6 +1,8 @@
 package dataStructures.trees;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree {
     private Node root;
@@ -34,6 +36,21 @@ public class BinaryTree {
         inOrder(output, node.right);
 
         return output;
+    }
+
+    public void BFSOrder() {
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
+            System.out.println(current.getValue());
+            if (current.left != null) {
+                queue.add(current.left);
+            }
+            if (current.right != null) {
+                queue.add(current.right);
+            }
+        }
     }
 
     public List<Object> postOrder(List<Object> output, Node node) {

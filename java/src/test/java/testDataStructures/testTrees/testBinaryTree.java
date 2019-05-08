@@ -11,8 +11,7 @@ import java.util.List;
 import static dataStructures.trees.BinarySearchTree.generate;
 import static dataStructures.trees.BinaryTree.randomNode;
 import static dataStructures.trees.FizzBuzzTree.FizzBuzz;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class testBinaryTree {
 
@@ -136,5 +135,37 @@ public class testBinaryTree {
     @Test
     public void testFizzyEdges() {
 
+    }
+
+    @Test
+    public void testBFSHappy() {
+        BinaryTree tree = new BinaryTree();
+        tree.root(new Node(1));
+        tree.root().left = new Node(2);
+        tree.root().right = new Node(3);
+        tree.root().left.left = new Node(4);
+        tree.root().right.right = new Node(5);
+
+        try {
+            tree.BFSOrder();
+        } catch (Exception E) {
+            fail();
+        }
+
+        //I dont want to build a logger to test the values
+        //The PD says to sout the results
+        //Testing souts needs a logger
+        //That seems excessive
+    }
+
+    @Test
+    public void testBFSfailure() {
+        BinaryTree tree = new BinaryTree();
+        try {
+            tree.BFSOrder();
+            fail();
+        } catch (NullPointerException N) {
+            System.out.println("Successfully throws an error if given an empty tree");
+        }
     }
 }
