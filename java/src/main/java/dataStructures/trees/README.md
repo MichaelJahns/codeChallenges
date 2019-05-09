@@ -6,6 +6,7 @@
 | `preOrder(List<Long>, Node node)` | Returns a `List<Long>` holding the value of all Nodes in the tree ordered Node, Left Branches, Right Branches |
 | `postOrder(List<Long>, Node node)`| Returns a `List<Long>` holding the value of all Nodes in the tree orderd Left Branches, Right Branches, Root  |
 | `BFSOrder()`                      | Prints to the console every node in the tree following a left to right, breadth first approach                |
+| `findMaxBTree()`                  | Returns an int value matching the highest value in the tree.                                                  | 
 
 | Binary Search Tree Methods  | Functionality                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -27,3 +28,5 @@ I could not conceptualize how a BFS would work in my head, the above resource wa
 [FizzBuzzTree Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/FizzBuzz.jpg)
 
 [BreadthFirstTravesals Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/BreadthFirstTravesal.jpg)
+
+[FindMaxValueBinaryTree Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/findMaxValueBTree.jpg)
