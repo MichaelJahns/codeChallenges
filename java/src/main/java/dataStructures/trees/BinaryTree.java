@@ -15,6 +15,27 @@ public class BinaryTree {
         this.root = new Node(value);
     }
 
+    public static int findMax(BinaryTree tree) {
+        Node node = tree.root();
+        int output = findMaxRecursive(node);
+        return output;
+    }
+
+    public static int findMaxRecursive(Node node) {
+        if (node == null) {
+            return Integer.MIN_VALUE;
+        }
+        int current = (int) node.getValue();
+        int left = findMaxRecursive(node.left);
+        int right = findMaxRecursive(node.right);
+
+        //If the return from left of right nodes is larger than the current
+        //Overwrite current with the value of left or right, as appropriate.
+        current = current < left ? left : current;
+        current = current < right ? right : current;
+        return current;
+    }
+
     public List<Object> preOrder(List<Object> output, Node node) {
         if (node == null) {
             return null;

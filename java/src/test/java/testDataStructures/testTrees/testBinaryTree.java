@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static dataStructures.trees.BinarySearchTree.generate;
+import static dataStructures.trees.BinaryTree.findMax;
 import static dataStructures.trees.BinaryTree.randomNode;
 import static dataStructures.trees.FizzBuzzTree.FizzBuzz;
 import static org.junit.Assert.*;
@@ -167,5 +168,40 @@ public class testBinaryTree {
         } catch (NullPointerException N) {
             System.out.println("Successfully throws an error if given an empty tree");
         }
+    }
+
+    @Test
+    public void testFindMaxBTree() {
+        BinaryTree tree = new BinaryTree();
+        tree.root(new Node(1));
+        tree.root().left = new Node(2);
+        tree.root().right = new Node(3);
+        tree.root().left.left = new Node(4);
+        tree.root().right.right = new Node(5);
+
+        int result = findMax(tree);
+        assertEquals("return was not the expected value", 5, result);
+        //Really struggling trying to find other relevant things I can test.
+    }
+
+    @Test
+    public void testFindMaxBtreeEdge() {
+        BinaryTree tree = new BinaryTree();
+        tree.root(new Node(40));
+        tree.root().left = new Node(2);
+        tree.root().right = new Node(43);
+        tree.root().left.left = new Node(4);
+        tree.root().right.right = new Node(43);
+
+        int result = findMax(tree);
+        assertEquals("return was not the expected value", 43, result);
+        //Its not much of an edge, but this is testing when we have multiple of the same values
+    }
+
+    @Test
+    public void testFindMaxBtreeEmptyTree() {
+        BinaryTree tree = new BinaryTree();
+        int result = findMax(tree);
+        assertEquals("Return was not minimum value", Integer.MIN_VALUE, result);
     }
 }
