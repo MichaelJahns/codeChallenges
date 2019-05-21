@@ -12,18 +12,27 @@ Insertion Sort
 
 ### Diagram
 
-  i         
-[ | 3 , 1 , 2  5 , 9 , 4 , 6 , 7 , 10 , 8 ]
-  | fully unsorted  
+i= 0
 
-           i
-[1 , 2 , 3 | 5 , 9 , 4 , 6 , 7 , 10 , 8 ]
-sorted     | unsorted     
+array full unsorted
 
-                                        i
-[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 | ]
-                        fully sorted    |      
+`[(i) 3 , 1 , 2  5 , 9 , 4 , 6 , 7 , 10 , 8 ]`
 
+
+i=3
+
+array partially sorted
+
+`[1 , 2 , 3 (i) 5 , 9 , 4 , 6 , 7 , 10 , 8 ]`
+
+
+finished
+
+array full sorted      
+
+`[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 (i) ]`
+
+`
 ### Algorithm
 For the next unsorted element
 
