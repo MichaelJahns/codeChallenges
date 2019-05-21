@@ -23,3 +23,4 @@ Coded by Michael J
 | 5-1-19  | Bracket Validation            | [link](/java/src/main/java/bracketValidation/)            |
 | 5-6-19  | Binary Tree                   | [link](/java/src/main/java/dataStructures/trees/)         |
 | 5-7-19  | FizzBuzz Binary Tree          | [link](/java/src/main/java/dataStructures/trees/)         |
+| 5-21-19 | Insertion Sort                | [link](/java/src/main/java/sorts/)                        |
