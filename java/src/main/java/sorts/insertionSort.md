@@ -11,26 +11,25 @@ Insertion Sort
 *why? 
 
 ### Diagram
+`[(i) 3 , 1 , 2  5 , 9 , 4 , 6 , 7 , 10 , 8 ]`
 
 i= 0
 
 array full unsorted
 
-`[(i) 3 , 1 , 2  5 , 9 , 4 , 6 , 7 , 10 , 8 ]`
-
-
-i=3
-
-array partially sorted
 
 `[1 , 2 , 3 (i) 5 , 9 , 4 , 6 , 7 , 10 , 8 ]`
 
 
-finished
+ i=3
 
-array full sorted      
+array partially sorted
 
 `[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 (i) ]`
+
+finished
+
+array full sorted     
 
 `
 ### Algorithm
