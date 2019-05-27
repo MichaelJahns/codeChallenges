@@ -25,3 +25,10 @@ look up time O(n) in the worst case scenario. The linked lists in the buckets gi
 ### Approach
 Space O(n)
 Time O(n)
+
+### Resources
+Hashtables are really cool and sort of make sense when you think about them but there is no way I could have logicked my way into building this
+[youtube](https://www.youtube.com/watch?v=MfhjkfocRR0)
+[geeksforgeeks](https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/)
+
+
