@@ -1,5 +1,8 @@
 # Hashtable
 
+## Problem Domain
+Implement a hash table without using built in methods. 
+
 ### Visual
 A Hashtable is an array of Buckets
 
@@ -19,6 +22,6 @@ Each Bucket is a Linked List
 By hashing our string and using modulus we can treat any given string as an in an array index, giving us a 
 look up time O(n) in the worst case scenario. The linked lists in the buckets give us a defense against collisions. 
 
-### Efficiency
+### Approach
 Space O(n)
 Time O(n)
