@@ -13,9 +13,17 @@ public class testLinkedList {
     @Test
     public void testInstantiate() {
         LinkedList empty = new LinkedList();
-        int expected = 0;
-        int actual = empty.getSize();
-        assertEquals("Linked list length <> expected", expected, actual);
+        try {
+            empty.getHead();
+            fail();
+        } catch (NullPointerException n) {
+            System.out.println("Successfully threw an error when getting the head of an empty LL");
+        }
+        assertEquals("Linked list length <> expected", 0, empty.getSize());
+
+        int[] expectedPrint = {};
+        assertEquals("Unexpected Print", Arrays.toString(expectedPrint), Arrays.toString(empty.printGuts()));
+
     }
 
     @Test
@@ -40,6 +48,7 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 7, 0};
         //True
+        assertEquals("Head wasn't as expected", 9, addToEnd.getHead());
         assertEquals("List formatting different than expected", Arrays.toString(expected), Arrays.toString(addToEnd.printGuts()));
         assertTrue("List was an unexpected size", 4 == addToEnd.getSize());
     }
@@ -54,6 +63,7 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 10, 7};
         //True
+        assertEquals("Head wasn't as expected", 9, addBefore.getHead());
         assertEquals("List formatting different than expected", Arrays.toString(expected), Arrays.toString(addBefore.printGuts()));
         assertTrue("List was an unexpected size", 4 == addBefore.getSize());
     }
@@ -68,6 +78,7 @@ public class testLinkedList {
 
         int[] expected = {9, 8, 10, 7};
         //True
+        assertEquals("Head wasn't as expected", 9, addAfter.getHead());
         assertEquals("List formatting was different than expected", Arrays.toString(expected), Arrays.toString(addAfter.printGuts()));
         assertTrue("List was an unexpected size", 4 == addAfter.getSize());
     }
@@ -77,9 +88,11 @@ public class testLinkedList {
         LinkedList header = new LinkedList();
         header.addToStart(1);
         assertEquals("The head node wasn't as expected", 1, header.getHead());
+
         header.addToStart(2);
         header.addToStart(3);
         assertEquals("The head node wasn't as expected", 3, header.getHead());
+
         header.addToStart(4);
         header.addToStart(5);
         assertEquals("The head node wasnt as expected", 5, header.getHead());
