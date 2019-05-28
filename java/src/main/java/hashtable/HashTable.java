@@ -24,14 +24,14 @@ public class HashTable<Key, Value> {
         return size() == 0;
     }
 
-    private int getHashedIndex(Key key) {
+    private int getBucketIndex(Key key) {
         int hashCode = key.hashCode();
         int index = hashCode % numBuckets;
         return index;
     }
 
     public Value remove(Key key) {
-        int bucketIndex = getHashedIndex(key);
+        int bucketIndex = getBucketIndex(key);
         HashNode<Key, Value> head = bucketArray.get(bucketIndex);
 
         HashNode<Key, Value> prev = null;
@@ -48,7 +48,7 @@ public class HashTable<Key, Value> {
     }
 
     public Value get(Key key) {
-        int bucketIndex = getHashedIndex(key);
+        int bucketIndex = getBucketIndex(key);
         HashNode<Key, Value> head = bucketArray.get(bucketIndex);
 
         while (head != null) {
@@ -59,7 +59,7 @@ public class HashTable<Key, Value> {
     }
 
     public void add(Key key, Value value) {
-        int bucketIndex = getHashedIndex(key);
+        int bucketIndex = getBucketIndex(key);
         HashNode<Key, Value> head = bucketArray.get(bucketIndex);
         while (head != null) {
             if (head.key.equals(key)) {
