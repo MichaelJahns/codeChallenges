@@ -26,3 +26,4 @@ Coded by Michael J
 | 5-21-19 | Insertion Sort                | [link](/java/src/main/java/sorts/)                        |
 | 5-22-19 | Merge Sort                    | [link](/java/src/main/java/sorts/)                        |
 | 5-27-19 | HashTable                     | [link](/java/src/main/java/hashtable/)                    |
+| 5-28-19 | Find First Repeat             | [link](/java/src/main/java/stringManipulation/)           |
