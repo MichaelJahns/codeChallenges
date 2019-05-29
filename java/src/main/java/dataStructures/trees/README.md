@@ -20,3 +20,5 @@ The major downside of which, is that repeat intersections are not counted twice.
 
 Space `O(n)^2`
 Time `O(n)^2`
+
+[Whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/binaryTreeIntersections.jpg)
