@@ -1,6 +1,6 @@
-package testHashTable;
+package testHash.testHashTable;
 
-import hashtable.HashTable;
+import hash.hashtable.HashTable;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

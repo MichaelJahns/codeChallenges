@@ -1,4 +1,4 @@
-package hashtable;
+package hash.hashtable;
 
 public class HashNode<Key, Value> {
     Key key;
