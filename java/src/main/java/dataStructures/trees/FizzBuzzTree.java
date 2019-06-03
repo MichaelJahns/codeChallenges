@@ -45,7 +45,7 @@ public class FizzBuzzTree {
         //I need to return a tree.
         //  This is not a method of BinaryTree, so I cant use this to modify in place
         //  I could fucking pass in a Tree and just pass it around which is sort of lame. This looks better now that Im not passing around a list unnecessarily
-        //  Do I need to output at a Tree in a return at all? Does directly modifying Node modify the associated tree? Is /that/ the utility of data structures I havent been able to see until just now?
+        //  Do I need to output at a Tree in a return at all? Does directly modifying Vertex modify the associated tree? Is /that/ the utility of data structures I havent been able to see until just now?
         return tree;
     }
 }

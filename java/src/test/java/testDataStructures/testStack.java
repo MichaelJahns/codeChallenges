@@ -13,7 +13,7 @@ public class testStack {
         Stack empty = new Stack();
         int expectedHeight = 0;
         assertEquals("Stack didn't instantiate with size of 0", expectedHeight, empty.getSize());
-        assertNull("Peek returned an unexpected Node", empty.peek());
+        assertNull("Peek returned an unexpected Vertex", empty.peek());
         try {
             empty.pop();
             fail();

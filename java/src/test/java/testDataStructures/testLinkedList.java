@@ -31,7 +31,7 @@ public class testLinkedList {
         LinkedList addToStart = new LinkedList();
         addToStart.addToStart(7);
         //True
-        assertEquals("Node with with specified value not found", 7, addToStart.find(7).getValue());
+        assertEquals("Vertex with with specified value not found", 7, addToStart.find(7).getValue());
         assertTrue("List has an unexpected number of items", 1 == addToStart.getSize());
         //False
         assertEquals("List has isn't returning null for items not present", null, addToStart.find(14));

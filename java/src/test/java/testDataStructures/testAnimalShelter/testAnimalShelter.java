@@ -24,8 +24,8 @@ public class testAnimalShelter {
 
         assertEquals("Front and Tail should be the same", shelter.peek(), shelter.peer());
         assertEquals("Shelter has an unexpected size", 1, shelter.getSize());
-        assertEquals("Animal Node had an unexpected name", "Lacy", shelter.peer().getName());
-        assertEquals("Animal Node had an unexpected type", "dog", shelter.peer().getType());
+        assertEquals("Animal Vertex had an unexpected name", "Lacy", shelter.peer().getName());
+        assertEquals("Animal Vertex had an unexpected type", "dog", shelter.peer().getType());
     }
 
     @Test
