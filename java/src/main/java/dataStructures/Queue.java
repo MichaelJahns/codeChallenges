@@ -37,6 +37,10 @@ public class Queue implements Datastructure {
         front = front.next();
         output.pointer = null;
         this.queueLength--;
+        //Tails value wouldn't have gotten updated without the following if
+        if (front == null) {
+            tail = null;
+        }
         return output;
     }
 
