@@ -1,6 +1,7 @@
 package testDataStructures.testGraphs;
 
 import dataStructures.graphs.Graph;
+import dataStructures.graphs.Vertex;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class testGraph {
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge("A", "B");
-        List<Graph.Vertex> actual1 = graph.getNeighbors("A");
+        List<Vertex> actual1 = graph.getNeighbors("A");
         assertEquals("List had an unexpected size", 1, actual1.size());
 
         graph.addVertex("C");
@@ -41,10 +42,10 @@ public class testGraph {
         graph.addEdge("A", "D");
         graph.addEdge("B", "D");
 
-        List<Graph.Vertex> actual2 = graph.getNeighbors("A");
+        List<Vertex> actual2 = graph.getNeighbors("A");
         assertEquals("List had an unexpected size", 3, actual2.size());
 
-        List<Graph.Vertex> actual3 = graph.getNeighbors("D");
+        List<Vertex> actual3 = graph.getNeighbors("D");
         assertEquals("List had an unexpected size", 2, actual3.size());
     }
 
@@ -147,6 +148,23 @@ public class testGraph {
         Map expected = new HashMap();
         assertEquals("Graph collection was not as expected", expected, graph.getCollection());
         assertEquals("Collection size was not as expected", 0, graph.getSize());
+    }
+
+    @Test
+    public void testBreadthFirstPrint() {
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addEdge("A", "B");
+        graph.addEdge("B", "C");
+        graph.addEdge("C", "D");
+        graph.addEdge("D", "A");
+
+        String print = graph.breadthFirstPrint(new Vertex("A"));
+        String expected = "A, B, D, C";
+        assertEquals("Print was not as expected", expected, print);
     }
 
 

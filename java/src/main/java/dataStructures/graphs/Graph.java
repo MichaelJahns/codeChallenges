@@ -1,9 +1,6 @@
 package dataStructures.graphs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
     private Map<Vertex, List<Vertex>> collection;
@@ -15,7 +12,7 @@ public class Graph {
     public Map<Vertex, List<Vertex>> getCollection() {
         return this.collection;
     }
-
+    
     public Vertex addVertex(String label) {
         Vertex newVertex = new Vertex(label);
         collection.putIfAbsent(newVertex, new ArrayList<>());
@@ -63,49 +60,27 @@ public class Graph {
         return collection.size();
     }
 
-    public class Vertex {
-        private String label;
+    public String breadthFirstPrint(Vertex head) {
+        LinkedList<Vertex> queue = new LinkedList<>();
 
-        public Vertex(String label) {
-            this.label = label;
+        List<Vertex> current = collection.get(head);
+        collection.
+                queue.add(current);
+
+        String output = "";
+        while (queue.size() != 0) {
+            current = queue.poll();
+            output += current.toString() + ", ";
+
+            Iterator<Vertex> iterator = collection.get(current).listIterator();
+            while (iterator.hasNext()) {
+                Vertex next = iterator.next();
+                if (next.isSeen() == false) {
+                    next.setSeen(true);
+                    queue.add(next);
+                }
+            }
         }
-
-        @Override
-        public int hashCode() {
-            final int prime = 31;
-            int result = 1;
-            result = prime * result + getOuterType().hashCode();
-            result = prime * result + ((label == null) ? 0 : label.hashCode());
-            return result;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (this == obj)
-                return true;
-            if (obj == null)
-                return false;
-            if (getClass() != obj.getClass())
-                return false;
-            Vertex other = (Vertex) obj;
-            if (!getOuterType().equals(other.getOuterType()))
-                return false;
-            if (label == null) {
-                if (other.label != null)
-                    return false;
-            } else if (!label.equals(other.label))
-                return false;
-            return true;
-        }
-
-        @Override
-        public String toString() {
-            return label;
-        }
-
-
-        private Graph getOuterType() {
-            return Graph.this;
-        }
+        return output;
     }
 }
