@@ -32,6 +32,7 @@ I ended up basically just rewriting this entire codebase trying to understand
 
 #### Resources Day Three
 
+[whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/flightmap.jpg)
 I ran out of time. Doing a super weird and wonky Graph on the first day of graphs has proven to be a massive mistake, trying to get any of these challenges to play nice with its structure is a nightmare. I spent most of the hour trying to rewrite it into a more digestable form
 
 
