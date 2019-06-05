@@ -12,7 +12,7 @@ public class Graph {
     public Map<Vertex, List<Vertex>> getCollection() {
         return this.collection;
     }
-    
+
     public Vertex addVertex(String label) {
         Vertex newVertex = new Vertex(label);
         collection.putIfAbsent(newVertex, new ArrayList<>());
