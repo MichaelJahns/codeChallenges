@@ -32,3 +32,4 @@ Coded by Michael J
 | 6-3-19  | Graph                         | [link](/java/src/main/java/dataStructures/graphs)         |
 | 6-4-19  | Graph Breadth First           | [link](/java/src/main/java/dataStructures/graphs)         |
 | 6-5-19  | Graph Flight Map              | [link](/java/src/main/java/dataStructures/graphs)         |
+| 6-6-19  | Graph DFS                     | [link](/java/src/main/java/dataStructures/graph)          |
