@@ -37,7 +37,9 @@ I ended up basically just rewriting this entire codebase trying to understand
 I ran out of time. Doing a super weird and wonky Graph on the first day of graphs has proven to be a massive mistake, trying to get any of these challenges to play nice with its structure is a nightmare. I spent most of the hour trying to rewrite it into a more digestable form
 
 #### Resources Day Four
-
 [whiteboard](https://github.com/MichaelJahns/codeChallenges/blob/master/java/src/assets/GraphDFS.jpg)
+
+It really bothers me that this solution doest have objects represeting the vertexes. I understand how much easier being able to use name and index interchangably but I think there is also an incredible real world value to being able to semantically label these things. 
+
 [GeeksForGeeks](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
